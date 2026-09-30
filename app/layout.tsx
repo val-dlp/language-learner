@@ -3,7 +3,7 @@ import "./globals.css";
 export const metadata: Metadata = {
     title: "Wordfield — Vocabulary Lab",
     description:
-        "Explore vocabulary through semantic search. A small English–Spanish learning experiment.",
+        "Adaptive vocabulary practice through free-form answers and evidence-based feedback.",
 };
 export default function RootLayout({
     children,

@@ -1,40 +1,53 @@
-import { describe, expect, it, vi } from "vitest";
-vi.mock("../lib/embedding", () => ({
-    embed: vi.fn(async () => [[1, 0]]),
-    MODEL: "test",
-    REVISION: "test",
-}));
-vi.mock("../lib/index-store", () => ({
-    loadIndex: vi.fn(async () => ({
-        vectors: Array.from({ length: 150 }, () => [1, 0]),
-    })),
-}));
-// Next's @ alias is resolved by Vitest's config.
-import { POST } from "../app/api/vocabulary/route";
-const request = (body: unknown) =>
-    new Request("http://localhost/api/vocabulary", {
-        method: "POST",
-        body: JSON.stringify(body),
-    });
-describe("vocabulary API", () => {
-    it.each([
-        {},
-        null,
-        { topic: "" },
-        { topic: "one two three" },
-        { topic: 123 },
-        { topic: "a".repeat(81) },
-    ])("rejects invalid input %j", async (body) => {
-        expect((await POST(request(body))).status).toBe(400);
-    });
-    it("returns ten quiz words and all ranked candidates", async () => {
+import { afterEach, describe, expect, it, vi } from "vitest";
+import { POST } from "@/app/api/tutor/route";
+
+const shared = globalThis as typeof globalThis & { wordfieldService?: unknown };
+afterEach(() => {
+    delete shared.wordfieldService;
+});
+describe("tutor API boundary", () => {
+    it("accepts the browser Host even when Next normalizes the request URL", async () => {
+        const command = vi.fn(async () => ({ ok: true }));
+        shared.wordfieldService = { command };
         const response = await POST(
-            request({ topic: "  kitchen   utensils  " }),
+            new Request("http://localhost:3000/api/tutor", {
+                method: "POST",
+                headers: {
+                    origin: "http://127.0.0.1:3000",
+                    host: "127.0.0.1:3000",
+                },
+                body: JSON.stringify({ action: "start" }),
+            }),
         );
         expect(response.status).toBe(200);
-        const data = await response.json();
-        expect(data.topic).toBe("kitchen utensils");
-        expect(data.items).toHaveLength(10);
-        expect(data.ranked).toHaveLength(150);
+        expect(command).toHaveBeenCalledWith({ action: "start" });
+    });
+    it.each(["https://unrelated.example", "null", "not a URL"])(
+        "rejects an unrelated or invalid origin: %s",
+        async (origin) => {
+            const response = await POST(
+                new Request("http://localhost:3000/api/tutor", {
+                    method: "POST",
+                    headers: { origin, host: "localhost:3000" },
+                    body: "{}",
+                }),
+            );
+            expect(response.status).toBe(403);
+        },
+    );
+    it("rejects oversized answers and never calls the service", async () => {
+        const command = vi.fn();
+        shared.wordfieldService = { command };
+        const response = await POST(
+            new Request("http://localhost:3000/api/tutor", {
+                method: "POST",
+                body: JSON.stringify({
+                    action: "answer",
+                    answer: "a".repeat(6001),
+                }),
+            }),
+        );
+        expect(response.status).toBe(400);
+        expect(command).not.toHaveBeenCalled();
     });
 });

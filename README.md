@@ -1,77 +1,56 @@
-# Language Learner
+# Wordfield — Vocabulary Lab
 
-## Overview
+A small adaptive vocabulary tutor built with Next.js, React, shadcn-style components, and the OpenAI Agents SDK. The tutor uses `gpt-6-luna` to generate questions, assess free-form answers, and write evidence-based session logs. English → Spanish is the default; the visible learner description can change the focus and preferences.
 
-An open-source language learning app for serious practitioners.
+## Run locally
 
-This project's primary purpose is to help learners achieve fluency in the following core areas:
-* Reading
-* Listening
-* Speaking
-
-Standard content will be included when possible, but users are encouraged to 'bring their own' content when it serves them.
-
-The application is AI-native, beginning with an API-based architecture for simplicity and eventually moving towards easier integration with local LLMs.
-
-While learning a new language is never easy, I hope that this application helps you in your journey and becomes a precursor to new friendships, broadened careers, and beautiful adventures.
-
-## Usage
-
-This project is free to use and distribute under the AGPLv3 license. To make the program accessible and economically viable, there will be a paid cloud service.
-
-## Vocabulary MVP — Wordfield
-
-A local semantic-retrieval experiment: enter one or two English words, retrieve ten Spanish words, and type their English translations. Correct answers, skip, or three incorrect attempts advance to the next word. Refreshing clears the session. There are no accounts, result storage, or application analytics.
-
-### Run locally
-
-Use Node.js 24 LTS and npm. From this directory:
+Requires Node.js 22+ and an OpenAI API key with access to `gpt-6-luna`.
 
 ```sh
-npm ci
-npm run embed
+npm install
+cp .env.example .env.local
+# Set OPENAI_API_KEY in .env.local. Never commit this file.
 npm run dev
 ```
 
-Open http://localhost:3000. The first embedding run downloads the pinned MiniLM model into `.cache/models/`; subsequent runs reuse it. The generated vocabulary vectors are included, but the local model is still needed to embed each new query. No API key or database is required. Internet access is needed for the initial model download; inference runs on the local Node server.
+If `.env.local` already exists, edit it rather than copying over it. Open http://localhost:3000. Restart the development server after changing environment variables. Model requests use your OpenAI API account and incur usage charges. No simulated tutor is exposed in the application.
 
-### Experiment
+## A session
 
-Turn on **Developer view** to inspect all 150 ranked entries, the exact English text embedded, scores, and evaluation labels. The first ten entries are the quiz. Filtering the table does not change the ranking. Switching views preserves your current quiz.
+1. Review the visible **learner description / seed prompt**: level, interests, language pair, and constraints such as “I can only respond in Spanish.” Save edits, or start a session to save and use them immediately.
+2. The tutor receives that description plus all previously saved session logs. It creates one question and a private assessment rubric before seeing an answer.
+3. Answer with a translation, explanation, or example. The tutor returns **pass**, **pass with clarification**, or **needs adjustment**, with concise feedback. Meaning, language notes, and response-constraint compliance are recorded separately.
+4. A pass, skip, or three attempts completes the question. There are at most ten questions. Click **Finish & save session** after question ten, or **End & save session** at any earlier point, to write the evidence-based log.
+5. **Restart** discards the current session without summarizing it and starts again from the latest saved learner description and logs. **Apply & restart session** first saves the edited description, then discards the session and starts with the new description. Neither operation adds a session log.
 
-Try `kitchen utensils`, `cooking utensils`, `musical instruments`, and `geometric shapes` for distinct groups; try `cold weather`, `outdoor adventure`, or `sports equipment` for overlaps. The dictionary has exactly ten entries in each control group and deliberately contains no kitchen appliances. Other groups overlap. Topic labels and Spanish text are never embedded or used to select results.
+An unanswered session ended before any answer or skip creates no log. Failed model calls can be retried without losing the saved checkpoint. Reloading the page reconnects to an active session in the same server process. Closing the tab does not save a session; restarting the server discards all unsaved session state.
 
-Every query returns the ten nearest entries, even when the dictionary does not cover the topic. `greetings` is a useful negative example. There is no relevance cutoff, generative fallback, randomization, or hidden category filtering. Cosine similarity is not confidence. Description wording and accepted synonyms can influence retrieval.
+## Developer view
 
-### Edit the dictionary
+The developer view exposes the exact composed seed, the current question's fixed rubric, attempts and structured verdicts, all current session evidence, the saved checkpoint, model name, and last request duration. It shows expected answers, so evidence collected while using this view should not be treated as an unaided learning assessment. It does not display private model reasoning.
 
-Edit `data/dictionary.json`, then run `npm run embed` and restart the app. Each record has a stable ID, Spanish word, accepted English answers, an English description, and evaluation-only topic labels. The index manifest catches changes to IDs, embedded text, model revision, or precision. Labels can change without re-embedding, but restart to reload them.
+## Architecture
 
-Answers ignore case and surrounding whitespace, but otherwise use exact matching. The hand-authored collection is a bounded practice set, not an exhaustive translation dictionary. See `data/README.md` for scope and regional choices.
+- `app/page.tsx`: session interface, editable seed, saved logs, and developer view.
+- `app/api/tutor/route.ts`: validated same-origin API; credentials remain server-side.
+- `lib/tutor.ts`: Agents SDK agent with task-specific structured output for question generation, assessment, and summary. The app supplies explicit context for each run; no hosted conversation or SDK session memory survives Restart.
+- `lib/session-service.ts`: server-owned state machine, retries, ten-question cap, cancellation, stale-request rejection, and checkpoint commits. Restart invalidates in-flight model work; discarded results cannot mutate the new session or save logs. Short state transitions and atomic file commits share a lock.
+- `lib/checkpoint.ts`: validated JSON storage at `.local/checkpoint.json`, using atomic replacement. The file contains the learner description and concise saved logs, never the full active transcript.
+- `lib/types.ts`: shared types and structured output schemas.
+- `tests/`: automated tests with injected simulated tutor responses; no API key required.
 
-### Modules
+The session log records what was covered, evidence of understanding, material gaps, and a suggested next focus. Hints and retries are marked as assisted. Prompts discourage mastery claims based on a single success and distinguish presented material from observed understanding. This is still model-generated assessment, not a calibrated proficiency measurement.
 
-- `data/dictionary.json`: 150 hand-authored entries.
-- `lib/embedding.ts`: pinned MiniLM, normalized mean pooling, 384 dimensions, fp32; shared by indexing and querying.
-- `lib/index-store.ts`: vector-file loading and compatibility validation.
-- `lib/rank.ts`: exact cosine ranking with deterministic ties.
-- `app/api/vocabulary/route.ts`: topic validation and retrieval endpoint.
-- `lib/quiz.ts`: pure quiz transitions; all user state lives in React memory.
-- `app/page.tsx`: topic picker, quiz, and developer table.
-- `components/ui/`: shadcn-style local Button and Input primitives using Radix Slot and Tailwind.
+This MVP is deliberately **single user, one Node server process**. The checkpoint is shared by tabs on that server. It has no accounts, authentication, multi-process coordination, or production database; use it locally, not as a public multi-user deployment. Saved logs accumulate without compaction for now. The entire saved context is sent on each tutor request. SDK tracing is disabled and Responses storage is disabled (`store: false`); requests still go to OpenAI and are subject to the account's data policies.
 
-The stack is Next.js, React, TypeScript, Tailwind, and Transformers.js using the ONNX conversion of all-MiniLM-L6-v2. It is intended for local experimentation with a long-lived Node server, not an Edge runtime.
+The previous embedding search, curated dictionary, vector index, and embedding scripts have been removed from the active implementation. Git history retains that experiment. Candidate-retrieval tools can be added later if useful.
 
-### Checks and retrieval report
+## Checks
 
 ```sh
 npm test
 npm run typecheck
-npm run evaluate
 npm run build
-npm start
 ```
 
-`evaluate` writes `data/evaluation.json`: full top-ten results for fixed prompts, control-group hit counts, and a repeated-query consistency check. It is observational; exploratory topics are not forced to match a category. Initial results: all seven control prompts recovered 10/10 intended entries. Overlapping topics mix categories; unsupported topics can return unrelated words.
-
-The production build uses Webpack; this environment's Turbopack production build hit a process/port permission error. Development uses Next's default bundler. Keep the `data` directory alongside the application when running a production server.
+Tests cover fixed rubrics, checkpoint recovery, retries, constraints, stale submissions, the ten-question boundary, failed saves, seed changes, and restarting during assessments or summary generation. The build uses webpack for compatibility with this local environment.
