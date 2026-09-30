@@ -1,0 +1,1722 @@
+[
+  {
+    "id": "es-cuchara",
+    "spanish": "cuchara",
+    "acceptedEnglish": [
+      "spoon"
+    ],
+    "description": "A utensil with a shallow bowl and a handle for eating or serving food.",
+    "topics": [
+      "kitchen utensils"
+    ]
+  },
+  {
+    "id": "es-tenedor",
+    "spanish": "tenedor",
+    "acceptedEnglish": [
+      "fork"
+    ],
+    "description": "A utensil with prongs used to hold and lift food while eating.",
+    "topics": [
+      "kitchen utensils"
+    ]
+  },
+  {
+    "id": "es-cuchillo",
+    "spanish": "cuchillo",
+    "acceptedEnglish": [
+      "knife"
+    ],
+    "description": "A utensil with a sharp blade for cutting food.",
+    "topics": [
+      "kitchen utensils"
+    ]
+  },
+  {
+    "id": "es-cucharon",
+    "spanish": "cucharón",
+    "acceptedEnglish": [
+      "ladle"
+    ],
+    "description": "A long-handled utensil with a deep bowl for serving soup.",
+    "topics": [
+      "kitchen utensils"
+    ]
+  },
+  {
+    "id": "es-espatula",
+    "spanish": "espátula",
+    "acceptedEnglish": [
+      "spatula"
+    ],
+    "description": "A flat utensil for lifting, turning, or spreading food.",
+    "topics": [
+      "kitchen utensils"
+    ]
+  },
+  {
+    "id": "es-batidor",
+    "spanish": "batidor",
+    "acceptedEnglish": [
+      "whisk"
+    ],
+    "description": "A wire utensil for beating eggs and mixing ingredients by hand.",
+    "topics": [
+      "kitchen utensils"
+    ]
+  },
+  {
+    "id": "es-rallador",
+    "spanish": "rallador",
+    "acceptedEnglish": [
+      "grater"
+    ],
+    "description": "A utensil with sharp holes for shredding cheese or vegetables.",
+    "topics": [
+      "kitchen utensils"
+    ]
+  },
+  {
+    "id": "es-pelador",
+    "spanish": "pelador",
+    "acceptedEnglish": [
+      "peeler"
+    ],
+    "description": "A small utensil for removing the skin from vegetables or fruit.",
+    "topics": [
+      "kitchen utensils"
+    ]
+  },
+  {
+    "id": "es-colador",
+    "spanish": "colador",
+    "acceptedEnglish": [
+      "strainer",
+      "sieve"
+    ],
+    "description": "A perforated utensil for draining or straining food and liquids.",
+    "topics": [
+      "kitchen utensils"
+    ]
+  },
+  {
+    "id": "es-pinzas",
+    "spanish": "pinzas",
+    "acceptedEnglish": [
+      "tongs"
+    ],
+    "description": "A two-armed utensil for gripping, lifting, and serving food.",
+    "topics": [
+      "kitchen utensils"
+    ]
+  },
+  {
+    "id": "es-guitarra",
+    "spanish": "guitarra",
+    "acceptedEnglish": [
+      "guitar"
+    ],
+    "description": "A stringed musical instrument played by plucking or strumming.",
+    "topics": [
+      "musical instruments"
+    ]
+  },
+  {
+    "id": "es-piano",
+    "spanish": "piano",
+    "acceptedEnglish": [
+      "piano"
+    ],
+    "description": "A musical instrument with a keyboard whose keys strike strings.",
+    "topics": [
+      "musical instruments"
+    ]
+  },
+  {
+    "id": "es-violin",
+    "spanish": "violín",
+    "acceptedEnglish": [
+      "violin"
+    ],
+    "description": "A small bowed string instrument held under the chin.",
+    "topics": [
+      "musical instruments"
+    ]
+  },
+  {
+    "id": "es-flauta",
+    "spanish": "flauta",
+    "acceptedEnglish": [
+      "flute"
+    ],
+    "description": "A wind instrument played by blowing across an opening.",
+    "topics": [
+      "musical instruments"
+    ]
+  },
+  {
+    "id": "es-trompeta",
+    "spanish": "trompeta",
+    "acceptedEnglish": [
+      "trumpet"
+    ],
+    "description": "A brass wind instrument with valves and a flared bell.",
+    "topics": [
+      "musical instruments"
+    ]
+  },
+  {
+    "id": "es-tambor",
+    "spanish": "tambor",
+    "acceptedEnglish": [
+      "drum"
+    ],
+    "description": "A percussion instrument played by striking a stretched membrane.",
+    "topics": [
+      "musical instruments"
+    ]
+  },
+  {
+    "id": "es-arpa",
+    "spanish": "arpa",
+    "acceptedEnglish": [
+      "harp"
+    ],
+    "description": "A large musical instrument with strings plucked with the fingers.",
+    "topics": [
+      "musical instruments"
+    ]
+  },
+  {
+    "id": "es-saxofon",
+    "spanish": "saxofón",
+    "acceptedEnglish": [
+      "saxophone"
+    ],
+    "description": "A curved metal wind instrument played with a single reed.",
+    "topics": [
+      "musical instruments"
+    ]
+  },
+  {
+    "id": "es-clarinete",
+    "spanish": "clarinete",
+    "acceptedEnglish": [
+      "clarinet"
+    ],
+    "description": "A woodwind instrument with a straight tube and a single reed.",
+    "topics": [
+      "musical instruments"
+    ]
+  },
+  {
+    "id": "es-violonchelo",
+    "spanish": "violonchelo",
+    "acceptedEnglish": [
+      "cello"
+    ],
+    "description": "A large bowed string instrument played upright between the knees.",
+    "topics": [
+      "musical instruments"
+    ]
+  },
+  {
+    "id": "es-circulo",
+    "spanish": "círculo",
+    "acceptedEnglish": [
+      "circle"
+    ],
+    "description": "A round flat shape with every boundary point equally far from its center.",
+    "topics": [
+      "geometric shapes"
+    ]
+  },
+  {
+    "id": "es-triangulo",
+    "spanish": "triángulo",
+    "acceptedEnglish": [
+      "triangle"
+    ],
+    "description": "A flat geometric shape with three straight sides and three angles.",
+    "topics": [
+      "geometric shapes"
+    ]
+  },
+  {
+    "id": "es-cuadrado",
+    "spanish": "cuadrado",
+    "acceptedEnglish": [
+      "square"
+    ],
+    "description": "A flat shape with four equal sides and four right angles.",
+    "topics": [
+      "geometric shapes"
+    ]
+  },
+  {
+    "id": "es-rectangulo",
+    "spanish": "rectángulo",
+    "acceptedEnglish": [
+      "rectangle"
+    ],
+    "description": "A flat shape with four right angles and equal opposite sides.",
+    "topics": [
+      "geometric shapes"
+    ]
+  },
+  {
+    "id": "es-ovalo",
+    "spanish": "óvalo",
+    "acceptedEnglish": [
+      "oval"
+    ],
+    "description": "An elongated rounded flat shape resembling the outline of an egg.",
+    "topics": [
+      "geometric shapes"
+    ]
+  },
+  {
+    "id": "es-rombo",
+    "spanish": "rombo",
+    "acceptedEnglish": [
+      "rhombus"
+    ],
+    "description": "A quadrilateral with four equal sides, often drawn as a diamond shape.",
+    "topics": [
+      "geometric shapes"
+    ]
+  },
+  {
+    "id": "es-pentagono",
+    "spanish": "pentágono",
+    "acceptedEnglish": [
+      "pentagon"
+    ],
+    "description": "A flat polygon with five straight sides.",
+    "topics": [
+      "geometric shapes"
+    ]
+  },
+  {
+    "id": "es-hexagono",
+    "spanish": "hexágono",
+    "acceptedEnglish": [
+      "hexagon"
+    ],
+    "description": "A flat polygon with six straight sides.",
+    "topics": [
+      "geometric shapes"
+    ]
+  },
+  {
+    "id": "es-octagono",
+    "spanish": "octágono",
+    "acceptedEnglish": [
+      "octagon"
+    ],
+    "description": "A flat polygon with eight straight sides.",
+    "topics": [
+      "geometric shapes"
+    ]
+  },
+  {
+    "id": "es-trapecio",
+    "spanish": "trapecio",
+    "acceptedEnglish": [
+      "trapezoid",
+      "trapezium"
+    ],
+    "description": "A quadrilateral with a pair of parallel sides; English terminology varies by region.",
+    "topics": [
+      "geometric shapes"
+    ]
+  },
+  {
+    "id": "es-camisa",
+    "spanish": "camisa",
+    "acceptedEnglish": [
+      "shirt"
+    ],
+    "description": "A garment for the upper body, usually with sleeves and buttons.",
+    "topics": [
+      "clothing"
+    ]
+  },
+  {
+    "id": "es-camiseta",
+    "spanish": "camiseta",
+    "acceptedEnglish": [
+      "tee",
+      "shirt"
+    ],
+    "description": "A casual short-sleeved shirt worn on the upper body.",
+    "topics": [
+      "clothing"
+    ]
+  },
+  {
+    "id": "es-pantalones",
+    "spanish": "pantalones",
+    "acceptedEnglish": [
+      "pants",
+      "trousers"
+    ],
+    "description": "An outer garment covering both legs separately.",
+    "topics": [
+      "clothing"
+    ]
+  },
+  {
+    "id": "es-falda",
+    "spanish": "falda",
+    "acceptedEnglish": [
+      "skirt"
+    ],
+    "description": "A garment hanging from the waist without separate legs.",
+    "topics": [
+      "clothing"
+    ]
+  },
+  {
+    "id": "es-vestido",
+    "spanish": "vestido",
+    "acceptedEnglish": [
+      "dress"
+    ],
+    "description": "A one-piece garment with a bodice and a skirt.",
+    "topics": [
+      "clothing"
+    ]
+  },
+  {
+    "id": "es-calcetin",
+    "spanish": "calcetín",
+    "acceptedEnglish": [
+      "sock"
+    ],
+    "description": "A soft garment covering the foot and ankle inside a shoe.",
+    "topics": [
+      "clothing"
+    ]
+  },
+  {
+    "id": "es-zapato",
+    "spanish": "zapato",
+    "acceptedEnglish": [
+      "shoe"
+    ],
+    "description": "Footwear with a sole, worn to protect the foot while walking.",
+    "topics": [
+      "clothing",
+      "travel"
+    ]
+  },
+  {
+    "id": "es-bota",
+    "spanish": "bota",
+    "acceptedEnglish": [
+      "boot"
+    ],
+    "description": "Sturdy footwear covering the foot and ankle, used for hiking or cold conditions.",
+    "topics": [
+      "clothing",
+      "outdoors"
+    ]
+  },
+  {
+    "id": "es-abrigo",
+    "spanish": "abrigo",
+    "acceptedEnglish": [
+      "coat",
+      "overcoat"
+    ],
+    "description": "A warm outer garment worn over other clothes in cold weather.",
+    "topics": [
+      "clothing",
+      "weather"
+    ]
+  },
+  {
+    "id": "es-chaqueta",
+    "spanish": "chaqueta",
+    "acceptedEnglish": [
+      "jacket"
+    ],
+    "description": "A short outer garment with sleeves for warmth and protection.",
+    "topics": [
+      "clothing",
+      "weather"
+    ]
+  },
+  {
+    "id": "es-bufanda",
+    "spanish": "bufanda",
+    "acceptedEnglish": [
+      "scarf"
+    ],
+    "description": "A strip of fabric worn around the neck to keep warm.",
+    "topics": [
+      "clothing",
+      "weather"
+    ]
+  },
+  {
+    "id": "es-guante",
+    "spanish": "guante",
+    "acceptedEnglish": [
+      "glove"
+    ],
+    "description": "A covering for the hand with separate sections for the fingers.",
+    "topics": [
+      "clothing",
+      "weather"
+    ]
+  },
+  {
+    "id": "es-sombrero",
+    "spanish": "sombrero",
+    "acceptedEnglish": [
+      "hat"
+    ],
+    "description": "A head covering with a brim that can provide shade from the sun.",
+    "topics": [
+      "clothing",
+      "outdoors"
+    ]
+  },
+  {
+    "id": "es-gorra",
+    "spanish": "gorra",
+    "acceptedEnglish": [
+      "cap"
+    ],
+    "description": "A soft head covering with a visor, often worn for outdoor sports.",
+    "topics": [
+      "clothing",
+      "sports"
+    ]
+  },
+  {
+    "id": "es-cinturon",
+    "spanish": "cinturón",
+    "acceptedEnglish": [
+      "belt"
+    ],
+    "description": "A band worn around the waist to hold clothing in place.",
+    "topics": [
+      "clothing"
+    ]
+  },
+  {
+    "id": "es-jersey",
+    "spanish": "jersey",
+    "acceptedEnglish": [
+      "sweater",
+      "jumper"
+    ],
+    "description": "A knitted upper-body garment worn for warmth.",
+    "topics": [
+      "clothing",
+      "weather"
+    ]
+  },
+  {
+    "id": "es-impermeable",
+    "spanish": "impermeable",
+    "acceptedEnglish": [
+      "raincoat"
+    ],
+    "description": "A waterproof coat worn to stay dry in the rain.",
+    "topics": [
+      "clothing",
+      "weather"
+    ]
+  },
+  {
+    "id": "es-banador",
+    "spanish": "bañador",
+    "acceptedEnglish": [
+      "swimsuit"
+    ],
+    "description": "A garment worn for swimming at a pool or beach.",
+    "topics": [
+      "clothing",
+      "sports",
+      "travel"
+    ]
+  },
+  {
+    "id": "es-sandalia",
+    "spanish": "sandalia",
+    "acceptedEnglish": [
+      "sandal"
+    ],
+    "description": "An open shoe held on the foot by straps, often worn in warm weather.",
+    "topics": [
+      "clothing",
+      "travel"
+    ]
+  },
+  {
+    "id": "es-pijama",
+    "spanish": "pijama",
+    "acceptedEnglish": [
+      "pajamas",
+      "pyjamas"
+    ],
+    "description": "Loose clothing worn for sleeping.",
+    "topics": [
+      "clothing"
+    ]
+  },
+  {
+    "id": "es-pasaporte",
+    "spanish": "pasaporte",
+    "acceptedEnglish": [
+      "passport"
+    ],
+    "description": "An official document used to prove identity when crossing national borders.",
+    "topics": [
+      "travel"
+    ]
+  },
+  {
+    "id": "es-maleta",
+    "spanish": "maleta",
+    "acceptedEnglish": [
+      "suitcase"
+    ],
+    "description": "A case used to pack and carry clothes when traveling.",
+    "topics": [
+      "travel"
+    ]
+  },
+  {
+    "id": "es-billete",
+    "spanish": "billete",
+    "acceptedEnglish": [
+      "ticket"
+    ],
+    "description": "A document granting passage on a train, bus, or airplane.",
+    "topics": [
+      "travel"
+    ]
+  },
+  {
+    "id": "es-aeropuerto",
+    "spanish": "aeropuerto",
+    "acceptedEnglish": [
+      "airport"
+    ],
+    "description": "A place where passenger aircraft take off and land.",
+    "topics": [
+      "travel"
+    ]
+  },
+  {
+    "id": "es-avion",
+    "spanish": "avión",
+    "acceptedEnglish": [
+      "airplane",
+      "aeroplane",
+      "plane"
+    ],
+    "description": "A powered aircraft used to transport passengers through the air.",
+    "topics": [
+      "travel"
+    ]
+  },
+  {
+    "id": "es-tren",
+    "spanish": "tren",
+    "acceptedEnglish": [
+      "train"
+    ],
+    "description": "Connected railway vehicles that carry passengers or freight.",
+    "topics": [
+      "travel"
+    ]
+  },
+  {
+    "id": "es-autobus",
+    "spanish": "autobús",
+    "acceptedEnglish": [
+      "bus"
+    ],
+    "description": "A large road vehicle that carries many passengers.",
+    "topics": [
+      "travel"
+    ]
+  },
+  {
+    "id": "es-taxi",
+    "spanish": "taxi",
+    "acceptedEnglish": [
+      "taxi",
+      "cab"
+    ],
+    "description": "A car hired with a driver to take passengers to a destination.",
+    "topics": [
+      "travel"
+    ]
+  },
+  {
+    "id": "es-hotel",
+    "spanish": "hotel",
+    "acceptedEnglish": [
+      "hotel"
+    ],
+    "description": "A building providing rooms for travelers to stay overnight.",
+    "topics": [
+      "travel"
+    ]
+  },
+  {
+    "id": "es-mapa",
+    "spanish": "mapa",
+    "acceptedEnglish": [
+      "map"
+    ],
+    "description": "A diagram showing roads, locations, and geographical features for navigation.",
+    "topics": [
+      "travel",
+      "outdoors"
+    ]
+  },
+  {
+    "id": "es-mochila",
+    "spanish": "mochila",
+    "acceptedEnglish": [
+      "backpack",
+      "rucksack"
+    ],
+    "description": "A bag carried on the back for travel, hiking, or daily use.",
+    "topics": [
+      "travel",
+      "outdoors"
+    ]
+  },
+  {
+    "id": "es-brujula",
+    "spanish": "brújula",
+    "acceptedEnglish": [
+      "compass"
+    ],
+    "description": "A navigation instrument whose needle points north.",
+    "topics": [
+      "travel",
+      "outdoors"
+    ]
+  },
+  {
+    "id": "es-aduana",
+    "spanish": "aduana",
+    "acceptedEnglish": [
+      "customs"
+    ],
+    "description": "The border authority that checks goods entering or leaving a country.",
+    "topics": [
+      "travel"
+    ]
+  },
+  {
+    "id": "es-equipaje",
+    "spanish": "equipaje",
+    "acceptedEnglish": [
+      "luggage",
+      "baggage"
+    ],
+    "description": "The bags and cases a traveler takes on a journey.",
+    "topics": [
+      "travel"
+    ]
+  },
+  {
+    "id": "es-sendero",
+    "spanish": "sendero",
+    "acceptedEnglish": [
+      "trail",
+      "path"
+    ],
+    "description": "A narrow route for walking through countryside or woodland.",
+    "topics": [
+      "travel",
+      "outdoors"
+    ]
+  },
+  {
+    "id": "es-bicicleta",
+    "spanish": "bicicleta",
+    "acceptedEnglish": [
+      "bicycle",
+      "bike"
+    ],
+    "description": "A two-wheeled vehicle powered by pedaling, used for transport and exercise.",
+    "topics": [
+      "travel",
+      "outdoors",
+      "sports"
+    ]
+  },
+  {
+    "id": "es-barco",
+    "spanish": "barco",
+    "acceptedEnglish": [
+      "boat",
+      "ship"
+    ],
+    "description": "A vessel used to travel across water.",
+    "topics": [
+      "travel",
+      "outdoors"
+    ]
+  },
+  {
+    "id": "es-puerto",
+    "spanish": "puerto",
+    "acceptedEnglish": [
+      "port",
+      "harbor",
+      "harbour"
+    ],
+    "description": "A sheltered place where ships dock and passengers or goods arrive.",
+    "topics": [
+      "travel"
+    ]
+  },
+  {
+    "id": "es-turista",
+    "spanish": "turista",
+    "acceptedEnglish": [
+      "tourist"
+    ],
+    "description": "A person visiting a place for pleasure or sightseeing.",
+    "topics": [
+      "travel"
+    ]
+  },
+  {
+    "id": "es-viaje",
+    "spanish": "viaje",
+    "acceptedEnglish": [
+      "trip",
+      "journey"
+    ],
+    "description": "An act of traveling from one place to another.",
+    "topics": [
+      "travel"
+    ]
+  },
+  {
+    "id": "es-bosque",
+    "spanish": "bosque",
+    "acceptedEnglish": [
+      "forest",
+      "woods"
+    ],
+    "description": "A large area of land covered with trees.",
+    "topics": [
+      "outdoors"
+    ]
+  },
+  {
+    "id": "es-montana",
+    "spanish": "montaña",
+    "acceptedEnglish": [
+      "mountain"
+    ],
+    "description": "A high natural elevation of land, often visited for hiking or climbing.",
+    "topics": [
+      "outdoors",
+      "travel"
+    ]
+  },
+  {
+    "id": "es-rio",
+    "spanish": "río",
+    "acceptedEnglish": [
+      "river"
+    ],
+    "description": "A natural flowing body of water that follows a channel.",
+    "topics": [
+      "outdoors"
+    ]
+  },
+  {
+    "id": "es-lago",
+    "spanish": "lago",
+    "acceptedEnglish": [
+      "lake"
+    ],
+    "description": "A large body of water surrounded by land.",
+    "topics": [
+      "outdoors"
+    ]
+  },
+  {
+    "id": "es-playa",
+    "spanish": "playa",
+    "acceptedEnglish": [
+      "beach"
+    ],
+    "description": "A sandy or pebbly shore beside the sea or a lake.",
+    "topics": [
+      "outdoors",
+      "travel"
+    ]
+  },
+  {
+    "id": "es-arbol",
+    "spanish": "árbol",
+    "acceptedEnglish": [
+      "tree"
+    ],
+    "description": "A tall plant with a woody trunk and branches.",
+    "topics": [
+      "outdoors"
+    ]
+  },
+  {
+    "id": "es-flor",
+    "spanish": "flor",
+    "acceptedEnglish": [
+      "flower"
+    ],
+    "description": "The colorful blossom of a plant.",
+    "topics": [
+      "outdoors"
+    ]
+  },
+  {
+    "id": "es-roca",
+    "spanish": "roca",
+    "acceptedEnglish": [
+      "rock"
+    ],
+    "description": "A solid piece of natural mineral material found on the ground.",
+    "topics": [
+      "outdoors"
+    ]
+  },
+  {
+    "id": "es-arena",
+    "spanish": "arena",
+    "acceptedEnglish": [
+      "sand"
+    ],
+    "description": "Small loose grains of rock found on beaches and in deserts.",
+    "topics": [
+      "outdoors"
+    ]
+  },
+  {
+    "id": "es-hielo",
+    "spanish": "hielo",
+    "acceptedEnglish": [
+      "ice"
+    ],
+    "description": "Water frozen into a solid, found on cold ground and frozen lakes.",
+    "topics": [
+      "outdoors",
+      "weather"
+    ]
+  },
+  {
+    "id": "es-sombra",
+    "spanish": "sombra",
+    "acceptedEnglish": [
+      "shade",
+      "shadow"
+    ],
+    "description": "Darkness or protection from sunlight created by something blocking the light.",
+    "topics": [
+      "outdoors",
+      "weather"
+    ]
+  },
+  {
+    "id": "es-cueva",
+    "spanish": "cueva",
+    "acceptedEnglish": [
+      "cave"
+    ],
+    "description": "A natural underground chamber in rock.",
+    "topics": [
+      "outdoors"
+    ]
+  },
+  {
+    "id": "es-cascada",
+    "spanish": "cascada",
+    "acceptedEnglish": [
+      "waterfall"
+    ],
+    "description": "Water dropping over a steep edge in a river or stream.",
+    "topics": [
+      "outdoors"
+    ]
+  },
+  {
+    "id": "es-valle",
+    "spanish": "valle",
+    "acceptedEnglish": [
+      "valley"
+    ],
+    "description": "Low land between hills or mountains.",
+    "topics": [
+      "outdoors"
+    ]
+  },
+  {
+    "id": "es-isla",
+    "spanish": "isla",
+    "acceptedEnglish": [
+      "island"
+    ],
+    "description": "A piece of land completely surrounded by water.",
+    "topics": [
+      "outdoors"
+    ]
+  },
+  {
+    "id": "es-desierto",
+    "spanish": "desierto",
+    "acceptedEnglish": [
+      "desert"
+    ],
+    "description": "A dry region with very little rainfall and sparse vegetation.",
+    "topics": [
+      "outdoors"
+    ]
+  },
+  {
+    "id": "es-linterna",
+    "spanish": "linterna",
+    "acceptedEnglish": [
+      "flashlight",
+      "torch"
+    ],
+    "description": "A portable electric light used to see in the dark while walking or camping.",
+    "topics": [
+      "outdoors",
+      "travel"
+    ]
+  },
+  {
+    "id": "es-fogata",
+    "spanish": "fogata",
+    "acceptedEnglish": [
+      "campfire"
+    ],
+    "description": "A small outdoor fire used at a campsite for warmth and light.",
+    "topics": [
+      "outdoors"
+    ]
+  },
+  {
+    "id": "es-cuerda",
+    "spanish": "cuerda",
+    "acceptedEnglish": [
+      "rope"
+    ],
+    "description": "A strong thick cord used for climbing, tying, or securing equipment.",
+    "topics": [
+      "outdoors",
+      "sports"
+    ]
+  },
+  {
+    "id": "es-pradera",
+    "spanish": "pradera",
+    "acceptedEnglish": [
+      "meadow",
+      "grassland"
+    ],
+    "description": "An open area of land covered with grass and wild plants.",
+    "topics": [
+      "outdoors"
+    ]
+  },
+  {
+    "id": "es-lluvia",
+    "spanish": "lluvia",
+    "acceptedEnglish": [
+      "rain"
+    ],
+    "description": "Drops of water falling from clouds.",
+    "topics": [
+      "weather"
+    ]
+  },
+  {
+    "id": "es-nieve",
+    "spanish": "nieve",
+    "acceptedEnglish": [
+      "snow"
+    ],
+    "description": "Soft white ice crystals falling from clouds in cold conditions.",
+    "topics": [
+      "weather"
+    ]
+  },
+  {
+    "id": "es-viento",
+    "spanish": "viento",
+    "acceptedEnglish": [
+      "wind"
+    ],
+    "description": "Moving air, especially outdoors.",
+    "topics": [
+      "weather"
+    ]
+  },
+  {
+    "id": "es-nube",
+    "spanish": "nube",
+    "acceptedEnglish": [
+      "cloud"
+    ],
+    "description": "A visible mass of tiny water droplets in the sky.",
+    "topics": [
+      "weather"
+    ]
+  },
+  {
+    "id": "es-tormenta",
+    "spanish": "tormenta",
+    "acceptedEnglish": [
+      "storm"
+    ],
+    "description": "Severe weather with strong wind, rain, or thunder.",
+    "topics": [
+      "weather"
+    ]
+  },
+  {
+    "id": "es-trueno",
+    "spanish": "trueno",
+    "acceptedEnglish": [
+      "thunder"
+    ],
+    "description": "The loud sound that follows lightning during a storm.",
+    "topics": [
+      "weather"
+    ]
+  },
+  {
+    "id": "es-relampago",
+    "spanish": "relámpago",
+    "acceptedEnglish": [
+      "lightning"
+    ],
+    "description": "A bright electrical flash in the sky during a storm.",
+    "topics": [
+      "weather"
+    ]
+  },
+  {
+    "id": "es-niebla",
+    "spanish": "niebla",
+    "acceptedEnglish": [
+      "fog",
+      "mist"
+    ],
+    "description": "Tiny water droplets suspended near the ground that reduce visibility.",
+    "topics": [
+      "weather"
+    ]
+  },
+  {
+    "id": "es-granizo",
+    "spanish": "granizo",
+    "acceptedEnglish": [
+      "hail"
+    ],
+    "description": "Small balls of ice falling from clouds.",
+    "topics": [
+      "weather"
+    ]
+  },
+  {
+    "id": "es-sol",
+    "spanish": "sol",
+    "acceptedEnglish": [
+      "sun"
+    ],
+    "description": "The star that gives Earth daylight and warmth.",
+    "topics": [
+      "weather"
+    ]
+  },
+  {
+    "id": "es-calor",
+    "spanish": "calor",
+    "acceptedEnglish": [
+      "heat"
+    ],
+    "description": "High temperature or the sensation of being hot.",
+    "topics": [
+      "weather"
+    ]
+  },
+  {
+    "id": "es-frio",
+    "spanish": "frío",
+    "acceptedEnglish": [
+      "cold"
+    ],
+    "description": "Low temperature or the sensation of being cold.",
+    "topics": [
+      "weather"
+    ]
+  },
+  {
+    "id": "es-humedad",
+    "spanish": "humedad",
+    "acceptedEnglish": [
+      "humidity",
+      "dampness"
+    ],
+    "description": "The amount of moisture in the air or surrounding environment.",
+    "topics": [
+      "weather"
+    ]
+  },
+  {
+    "id": "es-sequia",
+    "spanish": "sequía",
+    "acceptedEnglish": [
+      "drought"
+    ],
+    "description": "A prolonged period with little or no rainfall.",
+    "topics": [
+      "weather"
+    ]
+  },
+  {
+    "id": "es-arcoiris",
+    "spanish": "arcoíris",
+    "acceptedEnglish": [
+      "rainbow"
+    ],
+    "description": "A colored arc in the sky caused by sunlight shining through water droplets.",
+    "topics": [
+      "weather"
+    ]
+  },
+  {
+    "id": "es-futbol",
+    "spanish": "fútbol",
+    "acceptedEnglish": [
+      "soccer",
+      "football"
+    ],
+    "description": "A team sport played by kicking a ball into the opposing goal.",
+    "topics": [
+      "sports"
+    ]
+  },
+  {
+    "id": "es-tenis",
+    "spanish": "tenis",
+    "acceptedEnglish": [
+      "tennis"
+    ],
+    "description": "A racket sport in which players hit a ball over a net.",
+    "topics": [
+      "sports"
+    ]
+  },
+  {
+    "id": "es-baloncesto",
+    "spanish": "baloncesto",
+    "acceptedEnglish": [
+      "basketball"
+    ],
+    "description": "A team sport in which players throw a ball through a raised hoop.",
+    "topics": [
+      "sports"
+    ]
+  },
+  {
+    "id": "es-natacion",
+    "spanish": "natación",
+    "acceptedEnglish": [
+      "swimming"
+    ],
+    "description": "Moving through water using the arms and legs as a sport or activity.",
+    "topics": [
+      "sports"
+    ]
+  },
+  {
+    "id": "es-ciclismo",
+    "spanish": "ciclismo",
+    "acceptedEnglish": [
+      "cycling",
+      "bicycling"
+    ],
+    "description": "Riding a bicycle as a sport or physical activity.",
+    "topics": [
+      "sports"
+    ]
+  },
+  {
+    "id": "es-escalada",
+    "spanish": "escalada",
+    "acceptedEnglish": [
+      "climbing"
+    ],
+    "description": "Ascending rock faces or steep surfaces using hands and feet.",
+    "topics": [
+      "sports",
+      "outdoors"
+    ]
+  },
+  {
+    "id": "es-esqui",
+    "spanish": "esquí",
+    "acceptedEnglish": [
+      "skiing"
+    ],
+    "description": "A winter sport involving sliding over snow on long narrow runners.",
+    "topics": [
+      "sports",
+      "weather"
+    ]
+  },
+  {
+    "id": "es-senderismo",
+    "spanish": "senderismo",
+    "acceptedEnglish": [
+      "hiking"
+    ],
+    "description": "Walking along trails in the countryside for recreation.",
+    "topics": [
+      "sports",
+      "outdoors"
+    ]
+  },
+  {
+    "id": "es-raqueta",
+    "spanish": "raqueta",
+    "acceptedEnglish": [
+      "racket",
+      "racquet"
+    ],
+    "description": "A handled frame with strings used to strike a ball in tennis.",
+    "topics": [
+      "sports"
+    ]
+  },
+  {
+    "id": "es-pelota",
+    "spanish": "pelota",
+    "acceptedEnglish": [
+      "ball"
+    ],
+    "description": "A round object thrown, kicked, or hit in games and sports.",
+    "topics": [
+      "sports"
+    ]
+  },
+  {
+    "id": "es-bate",
+    "spanish": "bate",
+    "acceptedEnglish": [
+      "bat"
+    ],
+    "description": "A wooden or metal club used to hit a ball in baseball.",
+    "topics": [
+      "sports"
+    ]
+  },
+  {
+    "id": "es-casco",
+    "spanish": "casco",
+    "acceptedEnglish": [
+      "helmet"
+    ],
+    "description": "Protective headgear worn for cycling and other activities.",
+    "topics": [
+      "sports"
+    ]
+  },
+  {
+    "id": "es-estadio",
+    "spanish": "estadio",
+    "acceptedEnglish": [
+      "stadium"
+    ],
+    "description": "A large venue with spectator seating around a sports field.",
+    "topics": [
+      "sports"
+    ]
+  },
+  {
+    "id": "es-arbitro",
+    "spanish": "árbitro",
+    "acceptedEnglish": [
+      "referee",
+      "umpire"
+    ],
+    "description": "An official who enforces the rules during a sporting contest.",
+    "topics": [
+      "sports"
+    ]
+  },
+  {
+    "id": "es-atleta",
+    "spanish": "atleta",
+    "acceptedEnglish": [
+      "athlete"
+    ],
+    "description": "A person who trains and competes in sports.",
+    "topics": [
+      "sports"
+    ]
+  },
+  {
+    "id": "es-perro",
+    "spanish": "perro",
+    "acceptedEnglish": [
+      "dog"
+    ],
+    "description": "A domesticated animal often kept as a pet and known for barking.",
+    "topics": [
+      "animals"
+    ]
+  },
+  {
+    "id": "es-gato",
+    "spanish": "gato",
+    "acceptedEnglish": [
+      "cat"
+    ],
+    "description": "A small domesticated feline often kept as a pet.",
+    "topics": [
+      "animals"
+    ]
+  },
+  {
+    "id": "es-caballo",
+    "spanish": "caballo",
+    "acceptedEnglish": [
+      "horse"
+    ],
+    "description": "A large hoofed animal used for riding.",
+    "topics": [
+      "animals"
+    ]
+  },
+  {
+    "id": "es-vaca",
+    "spanish": "vaca",
+    "acceptedEnglish": [
+      "cow"
+    ],
+    "description": "A large farm animal commonly raised for milk.",
+    "topics": [
+      "animals"
+    ]
+  },
+  {
+    "id": "es-oveja",
+    "spanish": "oveja",
+    "acceptedEnglish": [
+      "sheep"
+    ],
+    "description": "A woolly farm animal kept in flocks.",
+    "topics": [
+      "animals"
+    ]
+  },
+  {
+    "id": "es-cerdo",
+    "spanish": "cerdo",
+    "acceptedEnglish": [
+      "pig"
+    ],
+    "description": "A farm animal with a stout body and a flat snout.",
+    "topics": [
+      "animals"
+    ]
+  },
+  {
+    "id": "es-conejo",
+    "spanish": "conejo",
+    "acceptedEnglish": [
+      "rabbit"
+    ],
+    "description": "A small furry animal with long ears and strong hind legs.",
+    "topics": [
+      "animals"
+    ]
+  },
+  {
+    "id": "es-pajaro",
+    "spanish": "pájaro",
+    "acceptedEnglish": [
+      "bird"
+    ],
+    "description": "An animal with feathers, wings, and a beak.",
+    "topics": [
+      "animals"
+    ]
+  },
+  {
+    "id": "es-pez",
+    "spanish": "pez",
+    "acceptedEnglish": [
+      "fish"
+    ],
+    "description": "An aquatic animal with gills and fins, swimming alive in water.",
+    "topics": [
+      "animals"
+    ]
+  },
+  {
+    "id": "es-mariposa",
+    "spanish": "mariposa",
+    "acceptedEnglish": [
+      "butterfly"
+    ],
+    "description": "An insect with broad colorful wings often seen near flowers.",
+    "topics": [
+      "animals",
+      "outdoors"
+    ]
+  },
+  {
+    "id": "es-abeja",
+    "spanish": "abeja",
+    "acceptedEnglish": [
+      "bee"
+    ],
+    "description": "A flying insect that visits flowers and can produce honey.",
+    "topics": [
+      "animals",
+      "outdoors"
+    ]
+  },
+  {
+    "id": "es-oso",
+    "spanish": "oso",
+    "acceptedEnglish": [
+      "bear"
+    ],
+    "description": "A large heavy mammal with thick fur and strong claws.",
+    "topics": [
+      "animals",
+      "outdoors"
+    ]
+  },
+  {
+    "id": "es-lobo",
+    "spanish": "lobo",
+    "acceptedEnglish": [
+      "wolf"
+    ],
+    "description": "A wild canine that often lives and hunts in packs.",
+    "topics": [
+      "animals",
+      "outdoors"
+    ]
+  },
+  {
+    "id": "es-zorro",
+    "spanish": "zorro",
+    "acceptedEnglish": [
+      "fox"
+    ],
+    "description": "A small wild canine with a bushy tail.",
+    "topics": [
+      "animals",
+      "outdoors"
+    ]
+  },
+  {
+    "id": "es-tortuga",
+    "spanish": "tortuga",
+    "acceptedEnglish": [
+      "turtle",
+      "tortoise"
+    ],
+    "description": "A reptile with a hard shell protecting its body.",
+    "topics": [
+      "animals"
+    ]
+  },
+  {
+    "id": "es-mano",
+    "spanish": "mano",
+    "acceptedEnglish": [
+      "hand"
+    ],
+    "description": "The part at the end of the arm used for grasping objects.",
+    "topics": [
+      "body",
+      "sports"
+    ]
+  },
+  {
+    "id": "es-pie",
+    "spanish": "pie",
+    "acceptedEnglish": [
+      "foot"
+    ],
+    "description": "The part at the end of the leg used for standing and walking.",
+    "topics": [
+      "body",
+      "sports"
+    ]
+  },
+  {
+    "id": "es-cabeza",
+    "spanish": "cabeza",
+    "acceptedEnglish": [
+      "head"
+    ],
+    "description": "The upper part of the body containing the brain, eyes, and mouth.",
+    "topics": [
+      "body"
+    ]
+  },
+  {
+    "id": "es-brazo",
+    "spanish": "brazo",
+    "acceptedEnglish": [
+      "arm"
+    ],
+    "description": "An upper limb extending from the shoulder to the hand.",
+    "topics": [
+      "body",
+      "sports"
+    ]
+  },
+  {
+    "id": "es-pierna",
+    "spanish": "pierna",
+    "acceptedEnglish": [
+      "leg"
+    ],
+    "description": "A lower limb used for standing, walking, and running.",
+    "topics": [
+      "body",
+      "sports"
+    ]
+  },
+  {
+    "id": "es-ojo",
+    "spanish": "ojo",
+    "acceptedEnglish": [
+      "eye"
+    ],
+    "description": "An organ used for seeing.",
+    "topics": [
+      "body"
+    ]
+  },
+  {
+    "id": "es-oreja",
+    "spanish": "oreja",
+    "acceptedEnglish": [
+      "ear"
+    ],
+    "description": "The outer part of the hearing organ on the side of the head.",
+    "topics": [
+      "body"
+    ]
+  },
+  {
+    "id": "es-nariz",
+    "spanish": "nariz",
+    "acceptedEnglish": [
+      "nose"
+    ],
+    "description": "The facial organ used for smelling and breathing.",
+    "topics": [
+      "body"
+    ]
+  },
+  {
+    "id": "es-boca",
+    "spanish": "boca",
+    "acceptedEnglish": [
+      "mouth"
+    ],
+    "description": "The opening in the face used for eating and speaking.",
+    "topics": [
+      "body"
+    ]
+  },
+  {
+    "id": "es-diente",
+    "spanish": "diente",
+    "acceptedEnglish": [
+      "tooth"
+    ],
+    "description": "A hard structure in the mouth used for biting and chewing.",
+    "topics": [
+      "body"
+    ]
+  },
+  {
+    "id": "es-lengua",
+    "spanish": "lengua",
+    "acceptedEnglish": [
+      "tongue"
+    ],
+    "description": "The muscular organ in the mouth used for tasting and speaking.",
+    "topics": [
+      "body"
+    ]
+  },
+  {
+    "id": "es-cuello",
+    "spanish": "cuello",
+    "acceptedEnglish": [
+      "neck"
+    ],
+    "description": "The part of the body connecting the head to the torso.",
+    "topics": [
+      "body"
+    ]
+  },
+  {
+    "id": "es-hombro",
+    "spanish": "hombro",
+    "acceptedEnglish": [
+      "shoulder"
+    ],
+    "description": "The joint where the arm connects to the torso.",
+    "topics": [
+      "body",
+      "sports"
+    ]
+  },
+  {
+    "id": "es-rodilla",
+    "spanish": "rodilla",
+    "acceptedEnglish": [
+      "knee"
+    ],
+    "description": "The joint in the middle of the leg.",
+    "topics": [
+      "body",
+      "sports"
+    ]
+  },
+  {
+    "id": "es-espalda",
+    "spanish": "espalda",
+    "acceptedEnglish": [
+      "back"
+    ],
+    "description": "The rear surface of the torso, extending from shoulders to hips.",
+    "topics": [
+      "body",
+      "sports"
+    ]
+  }
+]

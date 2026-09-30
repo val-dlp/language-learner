@@ -1,0 +1,48 @@
+@import "tailwindcss";
+:root {
+  color-scheme: light;
+}
+body {
+  margin: 0;
+  background: #f8f7f3;
+  color: #242e2b;
+  font-family: Arial, Helvetica, sans-serif;
+}
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+button {
+  cursor: pointer;
+}
+::selection {
+  background: #d5e8df;
+}
+.serif {
+  font-family: Georgia, "Times New Roman", serif;
+}
+.grid-paper {
+  background-image: radial-gradient(#c6d4cb 0.8px, transparent 0.8px);
+  background-size: 22px 22px;
+}
+@keyframes arrive {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.arrive {
+  animation: arrive 250ms ease-out;
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

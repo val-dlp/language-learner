@@ -1,0 +1,1327 @@
+{
+  "model": "Xenova/all-MiniLM-L6-v2",
+  "revision": "751bff37182d3f1213fa05d7196b954e230abad9",
+  "report": [
+    {
+      "prompt": "kitchen utensils",
+      "expectedTopic": "kitchen utensils",
+      "hits": 10,
+      "results": [
+        {
+          "spanish": "cuchara",
+          "english": [
+            "spoon"
+          ],
+          "similarity": 0.6427026691690587,
+          "topics": [
+            "kitchen utensils"
+          ]
+        },
+        {
+          "spanish": "cuchillo",
+          "english": [
+            "knife"
+          ],
+          "similarity": 0.6044218388775713,
+          "topics": [
+            "kitchen utensils"
+          ]
+        },
+        {
+          "spanish": "pinzas",
+          "english": [
+            "tongs"
+          ],
+          "similarity": 0.6017104522993882,
+          "topics": [
+            "kitchen utensils"
+          ]
+        },
+        {
+          "spanish": "tenedor",
+          "english": [
+            "fork"
+          ],
+          "similarity": 0.5772833272339627,
+          "topics": [
+            "kitchen utensils"
+          ]
+        },
+        {
+          "spanish": "rallador",
+          "english": [
+            "grater"
+          ],
+          "similarity": 0.5260096225319006,
+          "topics": [
+            "kitchen utensils"
+          ]
+        },
+        {
+          "spanish": "cucharón",
+          "english": [
+            "ladle"
+          ],
+          "similarity": 0.5190611973028368,
+          "topics": [
+            "kitchen utensils"
+          ]
+        },
+        {
+          "spanish": "colador",
+          "english": [
+            "strainer",
+            "sieve"
+          ],
+          "similarity": 0.5127316351550163,
+          "topics": [
+            "kitchen utensils"
+          ]
+        },
+        {
+          "spanish": "batidor",
+          "english": [
+            "whisk"
+          ],
+          "similarity": 0.4794575041222179,
+          "topics": [
+            "kitchen utensils"
+          ]
+        },
+        {
+          "spanish": "espátula",
+          "english": [
+            "spatula"
+          ],
+          "similarity": 0.45767414699326414,
+          "topics": [
+            "kitchen utensils"
+          ]
+        },
+        {
+          "spanish": "pelador",
+          "english": [
+            "peeler"
+          ],
+          "similarity": 0.4076482660567422,
+          "topics": [
+            "kitchen utensils"
+          ]
+        }
+      ]
+    },
+    {
+      "prompt": "cooking utensils",
+      "expectedTopic": "kitchen utensils",
+      "hits": 10,
+      "results": [
+        {
+          "spanish": "cuchara",
+          "english": [
+            "spoon"
+          ],
+          "similarity": 0.6245455364295772,
+          "topics": [
+            "kitchen utensils"
+          ]
+        },
+        {
+          "spanish": "pinzas",
+          "english": [
+            "tongs"
+          ],
+          "similarity": 0.6127487849685709,
+          "topics": [
+            "kitchen utensils"
+          ]
+        },
+        {
+          "spanish": "cuchillo",
+          "english": [
+            "knife"
+          ],
+          "similarity": 0.6057491122828328,
+          "topics": [
+            "kitchen utensils"
+          ]
+        },
+        {
+          "spanish": "cucharón",
+          "english": [
+            "ladle"
+          ],
+          "similarity": 0.5509991845871127,
+          "topics": [
+            "kitchen utensils"
+          ]
+        },
+        {
+          "spanish": "tenedor",
+          "english": [
+            "fork"
+          ],
+          "similarity": 0.5359678312453688,
+          "topics": [
+            "kitchen utensils"
+          ]
+        },
+        {
+          "spanish": "rallador",
+          "english": [
+            "grater"
+          ],
+          "similarity": 0.5063423942244865,
+          "topics": [
+            "kitchen utensils"
+          ]
+        },
+        {
+          "spanish": "colador",
+          "english": [
+            "strainer",
+            "sieve"
+          ],
+          "similarity": 0.4903334232759118,
+          "topics": [
+            "kitchen utensils"
+          ]
+        },
+        {
+          "spanish": "batidor",
+          "english": [
+            "whisk"
+          ],
+          "similarity": 0.4822739736516256,
+          "topics": [
+            "kitchen utensils"
+          ]
+        },
+        {
+          "spanish": "espátula",
+          "english": [
+            "spatula"
+          ],
+          "similarity": 0.45127720251522274,
+          "topics": [
+            "kitchen utensils"
+          ]
+        },
+        {
+          "spanish": "pelador",
+          "english": [
+            "peeler"
+          ],
+          "similarity": 0.3687177005627644,
+          "topics": [
+            "kitchen utensils"
+          ]
+        }
+      ]
+    },
+    {
+      "prompt": "utensils",
+      "expectedTopic": "kitchen utensils",
+      "hits": 10,
+      "results": [
+        {
+          "spanish": "cuchara",
+          "english": [
+            "spoon"
+          ],
+          "similarity": 0.6812102669998601,
+          "topics": [
+            "kitchen utensils"
+          ]
+        },
+        {
+          "spanish": "pinzas",
+          "english": [
+            "tongs"
+          ],
+          "similarity": 0.6579967357934702,
+          "topics": [
+            "kitchen utensils"
+          ]
+        },
+        {
+          "spanish": "cuchillo",
+          "english": [
+            "knife"
+          ],
+          "similarity": 0.6343360280773325,
+          "topics": [
+            "kitchen utensils"
+          ]
+        },
+        {
+          "spanish": "tenedor",
+          "english": [
+            "fork"
+          ],
+          "similarity": 0.6262145972965061,
+          "topics": [
+            "kitchen utensils"
+          ]
+        },
+        {
+          "spanish": "cucharón",
+          "english": [
+            "ladle"
+          ],
+          "similarity": 0.6024538059345638,
+          "topics": [
+            "kitchen utensils"
+          ]
+        },
+        {
+          "spanish": "colador",
+          "english": [
+            "strainer",
+            "sieve"
+          ],
+          "similarity": 0.5496646086675863,
+          "topics": [
+            "kitchen utensils"
+          ]
+        },
+        {
+          "spanish": "rallador",
+          "english": [
+            "grater"
+          ],
+          "similarity": 0.5467302218420171,
+          "topics": [
+            "kitchen utensils"
+          ]
+        },
+        {
+          "spanish": "espátula",
+          "english": [
+            "spatula"
+          ],
+          "similarity": 0.5163074730293856,
+          "topics": [
+            "kitchen utensils"
+          ]
+        },
+        {
+          "spanish": "batidor",
+          "english": [
+            "whisk"
+          ],
+          "similarity": 0.5007914463745458,
+          "topics": [
+            "kitchen utensils"
+          ]
+        },
+        {
+          "spanish": "pelador",
+          "english": [
+            "peeler"
+          ],
+          "similarity": 0.43792288590296513,
+          "topics": [
+            "kitchen utensils"
+          ]
+        }
+      ]
+    },
+    {
+      "prompt": "musical instruments",
+      "expectedTopic": "musical instruments",
+      "hits": 10,
+      "results": [
+        {
+          "spanish": "saxofón",
+          "english": [
+            "saxophone"
+          ],
+          "similarity": 0.6216889768281879,
+          "topics": [
+            "musical instruments"
+          ]
+        },
+        {
+          "spanish": "clarinete",
+          "english": [
+            "clarinet"
+          ],
+          "similarity": 0.6215559451408617,
+          "topics": [
+            "musical instruments"
+          ]
+        },
+        {
+          "spanish": "piano",
+          "english": [
+            "piano"
+          ],
+          "similarity": 0.6207463610780317,
+          "topics": [
+            "musical instruments"
+          ]
+        },
+        {
+          "spanish": "guitarra",
+          "english": [
+            "guitar"
+          ],
+          "similarity": 0.6125913908843648,
+          "topics": [
+            "musical instruments"
+          ]
+        },
+        {
+          "spanish": "arpa",
+          "english": [
+            "harp"
+          ],
+          "similarity": 0.5864236749350366,
+          "topics": [
+            "musical instruments"
+          ]
+        },
+        {
+          "spanish": "tambor",
+          "english": [
+            "drum"
+          ],
+          "similarity": 0.5655422681978688,
+          "topics": [
+            "musical instruments"
+          ]
+        },
+        {
+          "spanish": "trompeta",
+          "english": [
+            "trumpet"
+          ],
+          "similarity": 0.5627911319499568,
+          "topics": [
+            "musical instruments"
+          ]
+        },
+        {
+          "spanish": "flauta",
+          "english": [
+            "flute"
+          ],
+          "similarity": 0.5467373768366295,
+          "topics": [
+            "musical instruments"
+          ]
+        },
+        {
+          "spanish": "violín",
+          "english": [
+            "violin"
+          ],
+          "similarity": 0.5388668309839434,
+          "topics": [
+            "musical instruments"
+          ]
+        },
+        {
+          "spanish": "violonchelo",
+          "english": [
+            "cello"
+          ],
+          "similarity": 0.5082975275182076,
+          "topics": [
+            "musical instruments"
+          ]
+        }
+      ]
+    },
+    {
+      "prompt": "music instruments",
+      "expectedTopic": "musical instruments",
+      "hits": 10,
+      "results": [
+        {
+          "spanish": "saxofón",
+          "english": [
+            "saxophone"
+          ],
+          "similarity": 0.6521175148983225,
+          "topics": [
+            "musical instruments"
+          ]
+        },
+        {
+          "spanish": "clarinete",
+          "english": [
+            "clarinet"
+          ],
+          "similarity": 0.6112017593082432,
+          "topics": [
+            "musical instruments"
+          ]
+        },
+        {
+          "spanish": "guitarra",
+          "english": [
+            "guitar"
+          ],
+          "similarity": 0.5858382544552643,
+          "topics": [
+            "musical instruments"
+          ]
+        },
+        {
+          "spanish": "piano",
+          "english": [
+            "piano"
+          ],
+          "similarity": 0.5819380018256104,
+          "topics": [
+            "musical instruments"
+          ]
+        },
+        {
+          "spanish": "tambor",
+          "english": [
+            "drum"
+          ],
+          "similarity": 0.5735009175381864,
+          "topics": [
+            "musical instruments"
+          ]
+        },
+        {
+          "spanish": "arpa",
+          "english": [
+            "harp"
+          ],
+          "similarity": 0.5728770058841645,
+          "topics": [
+            "musical instruments"
+          ]
+        },
+        {
+          "spanish": "trompeta",
+          "english": [
+            "trumpet"
+          ],
+          "similarity": 0.5711046754603801,
+          "topics": [
+            "musical instruments"
+          ]
+        },
+        {
+          "spanish": "violín",
+          "english": [
+            "violin"
+          ],
+          "similarity": 0.5490928511472742,
+          "topics": [
+            "musical instruments"
+          ]
+        },
+        {
+          "spanish": "flauta",
+          "english": [
+            "flute"
+          ],
+          "similarity": 0.5465637628185886,
+          "topics": [
+            "musical instruments"
+          ]
+        },
+        {
+          "spanish": "violonchelo",
+          "english": [
+            "cello"
+          ],
+          "similarity": 0.5052887145790276,
+          "topics": [
+            "musical instruments"
+          ]
+        }
+      ]
+    },
+    {
+      "prompt": "geometric shapes",
+      "expectedTopic": "geometric shapes",
+      "hits": 10,
+      "results": [
+        {
+          "spanish": "triángulo",
+          "english": [
+            "triangle"
+          ],
+          "similarity": 0.5867317902563962,
+          "topics": [
+            "geometric shapes"
+          ]
+        },
+        {
+          "spanish": "cuadrado",
+          "english": [
+            "square"
+          ],
+          "similarity": 0.5446733631040319,
+          "topics": [
+            "geometric shapes"
+          ]
+        },
+        {
+          "spanish": "rectángulo",
+          "english": [
+            "rectangle"
+          ],
+          "similarity": 0.5356017378908154,
+          "topics": [
+            "geometric shapes"
+          ]
+        },
+        {
+          "spanish": "círculo",
+          "english": [
+            "circle"
+          ],
+          "similarity": 0.5206931584200603,
+          "topics": [
+            "geometric shapes"
+          ]
+        },
+        {
+          "spanish": "pentágono",
+          "english": [
+            "pentagon"
+          ],
+          "similarity": 0.5187422262069057,
+          "topics": [
+            "geometric shapes"
+          ]
+        },
+        {
+          "spanish": "octágono",
+          "english": [
+            "octagon"
+          ],
+          "similarity": 0.5052973928349187,
+          "topics": [
+            "geometric shapes"
+          ]
+        },
+        {
+          "spanish": "hexágono",
+          "english": [
+            "hexagon"
+          ],
+          "similarity": 0.4853004365972552,
+          "topics": [
+            "geometric shapes"
+          ]
+        },
+        {
+          "spanish": "rombo",
+          "english": [
+            "rhombus"
+          ],
+          "similarity": 0.45530765557887043,
+          "topics": [
+            "geometric shapes"
+          ]
+        },
+        {
+          "spanish": "óvalo",
+          "english": [
+            "oval"
+          ],
+          "similarity": 0.40124090747509766,
+          "topics": [
+            "geometric shapes"
+          ]
+        },
+        {
+          "spanish": "trapecio",
+          "english": [
+            "trapezoid",
+            "trapezium"
+          ],
+          "similarity": 0.33469697047973435,
+          "topics": [
+            "geometric shapes"
+          ]
+        }
+      ]
+    },
+    {
+      "prompt": "geometry shapes",
+      "expectedTopic": "geometric shapes",
+      "hits": 10,
+      "results": [
+        {
+          "spanish": "triángulo",
+          "english": [
+            "triangle"
+          ],
+          "similarity": 0.6088175990917546,
+          "topics": [
+            "geometric shapes"
+          ]
+        },
+        {
+          "spanish": "cuadrado",
+          "english": [
+            "square"
+          ],
+          "similarity": 0.5552302780291388,
+          "topics": [
+            "geometric shapes"
+          ]
+        },
+        {
+          "spanish": "rectángulo",
+          "english": [
+            "rectangle"
+          ],
+          "similarity": 0.5393086690929789,
+          "topics": [
+            "geometric shapes"
+          ]
+        },
+        {
+          "spanish": "pentágono",
+          "english": [
+            "pentagon"
+          ],
+          "similarity": 0.5197981352719355,
+          "topics": [
+            "geometric shapes"
+          ]
+        },
+        {
+          "spanish": "octágono",
+          "english": [
+            "octagon"
+          ],
+          "similarity": 0.5079117901542121,
+          "topics": [
+            "geometric shapes"
+          ]
+        },
+        {
+          "spanish": "círculo",
+          "english": [
+            "circle"
+          ],
+          "similarity": 0.5058542301104556,
+          "topics": [
+            "geometric shapes"
+          ]
+        },
+        {
+          "spanish": "hexágono",
+          "english": [
+            "hexagon"
+          ],
+          "similarity": 0.47341548637162745,
+          "topics": [
+            "geometric shapes"
+          ]
+        },
+        {
+          "spanish": "rombo",
+          "english": [
+            "rhombus"
+          ],
+          "similarity": 0.43901177969449867,
+          "topics": [
+            "geometric shapes"
+          ]
+        },
+        {
+          "spanish": "óvalo",
+          "english": [
+            "oval"
+          ],
+          "similarity": 0.37408094032030315,
+          "topics": [
+            "geometric shapes"
+          ]
+        },
+        {
+          "spanish": "trapecio",
+          "english": [
+            "trapezoid",
+            "trapezium"
+          ],
+          "similarity": 0.3672850500654716,
+          "topics": [
+            "geometric shapes"
+          ]
+        }
+      ]
+    },
+    {
+      "prompt": "outdoor adventure",
+      "expectedTopic": null,
+      "hits": null,
+      "results": [
+        {
+          "spanish": "senderismo",
+          "english": [
+            "hiking"
+          ],
+          "similarity": 0.6754467132196094,
+          "topics": [
+            "sports",
+            "outdoors"
+          ]
+        },
+        {
+          "spanish": "sendero",
+          "english": [
+            "trail",
+            "path"
+          ],
+          "similarity": 0.4685977484100424,
+          "topics": [
+            "travel",
+            "outdoors"
+          ]
+        },
+        {
+          "spanish": "esquí",
+          "english": [
+            "skiing"
+          ],
+          "similarity": 0.46112316344831483,
+          "topics": [
+            "sports",
+            "weather"
+          ]
+        },
+        {
+          "spanish": "turista",
+          "english": [
+            "tourist"
+          ],
+          "similarity": 0.4339357997851508,
+          "topics": [
+            "travel"
+          ]
+        },
+        {
+          "spanish": "ciclismo",
+          "english": [
+            "cycling",
+            "bicycling"
+          ],
+          "similarity": 0.4306602649324623,
+          "topics": [
+            "sports"
+          ]
+        },
+        {
+          "spanish": "escalada",
+          "english": [
+            "climbing"
+          ],
+          "similarity": 0.41565723540452204,
+          "topics": [
+            "sports",
+            "outdoors"
+          ]
+        },
+        {
+          "spanish": "montaña",
+          "english": [
+            "mountain"
+          ],
+          "similarity": 0.410795607100239,
+          "topics": [
+            "outdoors",
+            "travel"
+          ]
+        },
+        {
+          "spanish": "natación",
+          "english": [
+            "swimming"
+          ],
+          "similarity": 0.39436295532851745,
+          "topics": [
+            "sports"
+          ]
+        },
+        {
+          "spanish": "fogata",
+          "english": [
+            "campfire"
+          ],
+          "similarity": 0.3916606037701641,
+          "topics": [
+            "outdoors"
+          ]
+        },
+        {
+          "spanish": "playa",
+          "english": [
+            "beach"
+          ],
+          "similarity": 0.389779347525043,
+          "topics": [
+            "outdoors",
+            "travel"
+          ]
+        }
+      ]
+    },
+    {
+      "prompt": "cold weather",
+      "expectedTopic": null,
+      "hits": null,
+      "results": [
+        {
+          "spanish": "nieve",
+          "english": [
+            "snow"
+          ],
+          "similarity": 0.5161314580930402,
+          "topics": [
+            "weather"
+          ]
+        },
+        {
+          "spanish": "abrigo",
+          "english": [
+            "coat",
+            "overcoat"
+          ],
+          "similarity": 0.5158092403052581,
+          "topics": [
+            "clothing",
+            "weather"
+          ]
+        },
+        {
+          "spanish": "frío",
+          "english": [
+            "cold"
+          ],
+          "similarity": 0.5083572619799948,
+          "topics": [
+            "weather"
+          ]
+        },
+        {
+          "spanish": "tormenta",
+          "english": [
+            "storm"
+          ],
+          "similarity": 0.3921028565449862,
+          "topics": [
+            "weather"
+          ]
+        },
+        {
+          "spanish": "hielo",
+          "english": [
+            "ice"
+          ],
+          "similarity": 0.37873666650185855,
+          "topics": [
+            "outdoors",
+            "weather"
+          ]
+        },
+        {
+          "spanish": "esquí",
+          "english": [
+            "skiing"
+          ],
+          "similarity": 0.36373152516705115,
+          "topics": [
+            "sports",
+            "weather"
+          ]
+        },
+        {
+          "spanish": "chaqueta",
+          "english": [
+            "jacket"
+          ],
+          "similarity": 0.34964698457512994,
+          "topics": [
+            "clothing",
+            "weather"
+          ]
+        },
+        {
+          "spanish": "granizo",
+          "english": [
+            "hail"
+          ],
+          "similarity": 0.3467282275050437,
+          "topics": [
+            "weather"
+          ]
+        },
+        {
+          "spanish": "lluvia",
+          "english": [
+            "rain"
+          ],
+          "similarity": 0.3334964904661176,
+          "topics": [
+            "weather"
+          ]
+        },
+        {
+          "spanish": "jersey",
+          "english": [
+            "sweater",
+            "jumper"
+          ],
+          "similarity": 0.32857957922097314,
+          "topics": [
+            "clothing",
+            "weather"
+          ]
+        }
+      ]
+    },
+    {
+      "prompt": "sports equipment",
+      "expectedTopic": null,
+      "hits": null,
+      "results": [
+        {
+          "spanish": "casco",
+          "english": [
+            "helmet"
+          ],
+          "similarity": 0.5305631082349115,
+          "topics": [
+            "sports"
+          ]
+        },
+        {
+          "spanish": "pelota",
+          "english": [
+            "ball"
+          ],
+          "similarity": 0.4866631702952386,
+          "topics": [
+            "sports"
+          ]
+        },
+        {
+          "spanish": "raqueta",
+          "english": [
+            "racket",
+            "racquet"
+          ],
+          "similarity": 0.4729159267641275,
+          "topics": [
+            "sports"
+          ]
+        },
+        {
+          "spanish": "atleta",
+          "english": [
+            "athlete"
+          ],
+          "similarity": 0.4665890179339091,
+          "topics": [
+            "sports"
+          ]
+        },
+        {
+          "spanish": "cinturón",
+          "english": [
+            "belt"
+          ],
+          "similarity": 0.4602513883764225,
+          "topics": [
+            "clothing"
+          ]
+        },
+        {
+          "spanish": "guante",
+          "english": [
+            "glove"
+          ],
+          "similarity": 0.415237382697869,
+          "topics": [
+            "clothing",
+            "weather"
+          ]
+        },
+        {
+          "spanish": "esquí",
+          "english": [
+            "skiing"
+          ],
+          "similarity": 0.3898269938996781,
+          "topics": [
+            "sports",
+            "weather"
+          ]
+        },
+        {
+          "spanish": "tenis",
+          "english": [
+            "tennis"
+          ],
+          "similarity": 0.3890161556279371,
+          "topics": [
+            "sports"
+          ]
+        },
+        {
+          "spanish": "árbitro",
+          "english": [
+            "referee",
+            "umpire"
+          ],
+          "similarity": 0.3840682802201247,
+          "topics": [
+            "sports"
+          ]
+        },
+        {
+          "spanish": "baloncesto",
+          "english": [
+            "basketball"
+          ],
+          "similarity": 0.3774487745373193,
+          "topics": [
+            "sports"
+          ]
+        }
+      ]
+    },
+    {
+      "prompt": "travel",
+      "expectedTopic": null,
+      "hits": null,
+      "results": [
+        {
+          "spanish": "viaje",
+          "english": [
+            "trip",
+            "journey"
+          ],
+          "similarity": 0.7740528341060432,
+          "topics": [
+            "travel"
+          ]
+        },
+        {
+          "spanish": "equipaje",
+          "english": [
+            "luggage",
+            "baggage"
+          ],
+          "similarity": 0.5642024120805725,
+          "topics": [
+            "travel"
+          ]
+        },
+        {
+          "spanish": "barco",
+          "english": [
+            "boat",
+            "ship"
+          ],
+          "similarity": 0.468637099978522,
+          "topics": [
+            "travel",
+            "outdoors"
+          ]
+        },
+        {
+          "spanish": "aeropuerto",
+          "english": [
+            "airport"
+          ],
+          "similarity": 0.4593092231414706,
+          "topics": [
+            "travel"
+          ]
+        },
+        {
+          "spanish": "taxi",
+          "english": [
+            "taxi",
+            "cab"
+          ],
+          "similarity": 0.4539655898572533,
+          "topics": [
+            "travel"
+          ]
+        },
+        {
+          "spanish": "maleta",
+          "english": [
+            "suitcase"
+          ],
+          "similarity": 0.4293815185831157,
+          "topics": [
+            "travel"
+          ]
+        },
+        {
+          "spanish": "turista",
+          "english": [
+            "tourist"
+          ],
+          "similarity": 0.4275159564845193,
+          "topics": [
+            "travel"
+          ]
+        },
+        {
+          "spanish": "avión",
+          "english": [
+            "airplane",
+            "aeroplane",
+            "plane"
+          ],
+          "similarity": 0.417465024420472,
+          "topics": [
+            "travel"
+          ]
+        },
+        {
+          "spanish": "senderismo",
+          "english": [
+            "hiking"
+          ],
+          "similarity": 0.40193461358040355,
+          "topics": [
+            "sports",
+            "outdoors"
+          ]
+        },
+        {
+          "spanish": "autobús",
+          "english": [
+            "bus"
+          ],
+          "similarity": 0.3878144848427232,
+          "topics": [
+            "travel"
+          ]
+        }
+      ]
+    },
+    {
+      "prompt": "greetings",
+      "expectedTopic": null,
+      "hits": null,
+      "results": [
+        {
+          "spanish": "granizo",
+          "english": [
+            "hail"
+          ],
+          "similarity": 0.21056381174362301,
+          "topics": [
+            "weather"
+          ]
+        },
+        {
+          "spanish": "pijama",
+          "english": [
+            "pajamas",
+            "pyjamas"
+          ],
+          "similarity": 0.197207703935239,
+          "topics": [
+            "clothing"
+          ]
+        },
+        {
+          "spanish": "camiseta",
+          "english": [
+            "tee",
+            "shirt"
+          ],
+          "similarity": 0.19564855818430726,
+          "topics": [
+            "clothing"
+          ]
+        },
+        {
+          "spanish": "frío",
+          "english": [
+            "cold"
+          ],
+          "similarity": 0.19331459049905658,
+          "topics": [
+            "weather"
+          ]
+        },
+        {
+          "spanish": "tormenta",
+          "english": [
+            "storm"
+          ],
+          "similarity": 0.18760747834762986,
+          "topics": [
+            "weather"
+          ]
+        },
+        {
+          "spanish": "relámpago",
+          "english": [
+            "lightning"
+          ],
+          "similarity": 0.1866477890873533,
+          "topics": [
+            "weather"
+          ]
+        },
+        {
+          "spanish": "aeropuerto",
+          "english": [
+            "airport"
+          ],
+          "similarity": 0.1819429636273952,
+          "topics": [
+            "travel"
+          ]
+        },
+        {
+          "spanish": "puerto",
+          "english": [
+            "port",
+            "harbor",
+            "harbour"
+          ],
+          "similarity": 0.17544079660977147,
+          "topics": [
+            "travel"
+          ]
+        },
+        {
+          "spanish": "calor",
+          "english": [
+            "heat"
+          ],
+          "similarity": 0.17343017581842796,
+          "topics": [
+            "weather"
+          ]
+        },
+        {
+          "spanish": "fútbol",
+          "english": [
+            "soccer",
+            "football"
+          ],
+          "similarity": 0.1732618855487045,
+          "topics": [
+            "sports"
+          ]
+        }
+      ]
+    }
+  ]
+}
