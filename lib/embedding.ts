@@ -7,19 +7,19 @@ export const DIMENSIONS = 384;
 export const DTYPE = "fp32";
 env.cacheDir = path.join(process.cwd(), ".cache", "models");
 function createExtractor() {
-  return pipeline("feature-extraction", MODEL, {
-    dtype: DTYPE,
-    revision: REVISION,
-  });
+    return pipeline("feature-extraction", MODEL, {
+        dtype: DTYPE,
+        revision: REVISION,
+    });
 }
 let extractorPromise: ReturnType<typeof createExtractor> | undefined;
 export async function embed(texts: string[]): Promise<number[][]> {
-  const extractor = await (extractorPromise ??= createExtractor().catch(
-    (error) => {
-      extractorPromise = undefined;
-      throw error;
-    },
-  ));
-  const output = await extractor(texts, { pooling: "mean", normalize: true });
-  return output.tolist() as number[][];
+    const extractor = await (extractorPromise ??= createExtractor().catch(
+        (error) => {
+            extractorPromise = undefined;
+            throw error;
+        },
+    ));
+    const output = await extractor(texts, { pooling: "mean", normalize: true });
+    return output.tolist() as number[][];
 }

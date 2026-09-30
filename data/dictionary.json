@@ -1718,5 +1718,17 @@
       "body",
       "sports"
     ]
+  },
+  {
+    "id": "es-barcos",
+    "spanish": "barcos",
+    "acceptedEnglish": [
+      "boats"
+    ],
+    "description": "Plural of boat.",
+    "topics": [
+      "travel",
+      "outdoors"
+    ]
   }
 ]
