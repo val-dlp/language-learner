@@ -17,4 +17,4 @@ While learning a new language is never easy, I hope that this application helps 
 
 ## Usage
 
-This project is free to use and distribute under the GPLv3 license. To make the program accessible and economically viable, there will be a paid cloud service.
+This project is free to use and distribute under the AGPLv3 license. To make the program accessible and economically viable, there will be a paid cloud service.
