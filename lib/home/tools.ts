@@ -219,12 +219,18 @@ export function documentTools(
                 "Reorder or supersede unstarted lessons. Include all IDs to retain, in desired order, and give an evidence-based reason. Active and completed lessons cannot be edited.",
             parameters: z.object({
                 retainedPlanIds: z.array(z.string()),
+                expectedRevision: z.number().int().nonnegative(),
                 reason: z.string().min(1),
             }),
             execute: wrap(
                 "revise_vocabulary_queue",
-                async ({ retainedPlanIds, reason }) =>
-                    reviseQueue(workspace, retainedPlanIds, reason),
+                async ({ retainedPlanIds, reason, expectedRevision }) =>
+                    reviseQueue(
+                        workspace,
+                        retainedPlanIds,
+                        reason,
+                        expectedRevision,
+                    ),
             ),
         }),
     ];

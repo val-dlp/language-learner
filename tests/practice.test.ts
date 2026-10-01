@@ -195,3 +195,70 @@ it("recovers an interrupted refill, coalesces concurrent kicks, and does not ret
     await worker.kick();
     expect(calls).toBe(2);
 });
+
+it("refills only after the fourth saved lesson and reads durable evidence before planning", async () => {
+    const { ws } = await setup();
+    const draft = JSON.parse(
+        (await ws.read("plugins/vocabulary/drafts/test.json")).content,
+    );
+    async function publish(title: string) {
+        const path = `plugins/vocabulary/drafts/${title}.json`;
+        await ws.write(
+            { path, content: JSON.stringify({ ...draft, title }) },
+            "home",
+        );
+        return publishLesson(ws, path, 1);
+    }
+    for (let i = 0; i < 4; i++) await publish(`initial-${i}`);
+    let calls = 0;
+    const home = new HomeService(ws, async () => {
+        calls++;
+        const evidence = (await ws.list("home")).filter((d) =>
+            d.path.endsWith("/evidence.json"),
+        );
+        expect(evidence).toHaveLength(4);
+        expect(
+            JSON.parse((await ws.read(evidence[3].path, "home")).content)
+                .evidence[0].attempts[0].answer,
+        ).toBe("street");
+        for (let i = 0; i < 4; i++) await publish(`refill-${i}`);
+        return { text: "Prepared four new lessons.", usage: null };
+    });
+    const worker = new RefillWorker(ws, home),
+        quiz = new QuizService(ws, async () => pass);
+    for (let i = 0; i < 4; i++) {
+        let active = (await quiz.start()).active!;
+        active = (await quiz.answer(active.id, active.version, "street"))
+            .active!;
+        await quiz.act("finish", active.id, active.version);
+        if (i < 3) {
+            await worker.kick();
+            expect(calls).toBe(0);
+        }
+    }
+    expect((await worker.status())?.status).toBe("pending");
+    await Promise.all([worker.kick(), worker.kick()]);
+    expect(calls).toBe(1);
+    expect((await worker.status())?.status).toBe("completed");
+    expect((await quiz.view()).ready).toBe(5);
+});
+it("keeps grading context private and records developer exposure before a lesson starts", async () => {
+    const { ws } = await setup();
+    const quiz = new QuizService(ws, async (input) => {
+        input.onDiagnostics?.({ privateRubric: "secret" });
+        return pass;
+    });
+    await quiz.expose();
+    let active = (await quiz.start()).active!;
+    expect(active.developerExposed).toBe(true);
+    active = (await quiz.answer(active.id, active.version, "street")).active!;
+    expect(JSON.stringify(active)).not.toContain("secret");
+    const saved = await quiz.act("finish", active.id, active.version);
+    expect(
+        (
+            await ws.read(
+                `plugins/vocabulary/sessions/${saved.lastSaved}/evidence.json`,
+            )
+        ).content,
+    ).toContain("privateRubric");
+});

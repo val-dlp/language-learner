@@ -1,6 +1,6 @@
 import { after, NextResponse } from "next/server";
 import { z } from "zod";
-import { getHome, getWorkspace, getRefill } from "@/lib/runtime";
+import { getHome, getWorkspace, getRefill, getQuiz } from "@/lib/runtime";
 import { body, failure } from "@/lib/http";
 import { WorkspaceError } from "@/lib/workspace/files";
 import {
@@ -54,13 +54,28 @@ export async function GET(request: Request) {
                 },
             });
         }
+        if (new URL(request.url).searchParams.has("trace")) {
+            await (await getQuiz()).expose();
+            return NextResponse.json(await home.latest());
+        }
+        const latest = await home.latest();
         const workspace = await getWorkspace();
         const queue = await workspace.mutate((tx) =>
             tx.get(QUEUE_PATH, emptyQueue()),
         );
         return NextResponse.json({
             messages: await home.messages(),
-            run: await home.latest(),
+            run: latest
+                ? {
+                      id: latest.id,
+                      status: latest.status,
+                      text: latest.text,
+                      trigger: latest.trigger,
+                      error: latest.error,
+                      model: latest.model,
+                      effort: latest.effort,
+                  }
+                : null,
             queue: {
                 ready: queue.ready,
                 activePlanId: queue.active?.plan.planId,

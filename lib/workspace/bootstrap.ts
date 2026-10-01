@@ -3,9 +3,12 @@ import { open } from "node:fs/promises";
 import path from "node:path";
 import { createHash } from "node:crypto";
 import type { Workspace } from "./store";
-import { DEFAULT_LEARNER } from "../types";
+const DEFAULT_LEARNER =
+    "I am an English speaker learning Spanish at roughly A1–A2 level. I know common greetings, everyday objects, and some present-tense verbs. Help me build useful everyday vocabulary and notice gaps in my understanding. I may answer in English or Spanish, with a translation or an explanation. Keep feedback concise and supportive.";
 export async function bootstrap(workspace: Workspace, repository: string) {
     await workspace.list(); // Establish and verify .local before reading the legacy fixed path.
+    if (await workspace.mutate((tx) => tx.get("_system/migration.json", false)))
+        return;
     let legacy: {
         learnerDescription?: string;
         logs?: { id: string; endedAt: string; summary: unknown }[];
@@ -17,7 +20,11 @@ export async function bootstrap(workspace: Workspace, repository: string) {
         );
         try {
             const stat = await file.stat();
-            if (!stat.isFile() || stat.nlink !== 1)
+            if (
+                !stat.isFile() ||
+                stat.nlink !== 1 ||
+                stat.size > 20 * 1024 * 1024
+            )
                 throw new Error("Invalid legacy checkpoint");
             legacy = JSON.parse(await file.readFile("utf8"));
         } finally {

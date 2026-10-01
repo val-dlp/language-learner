@@ -49,7 +49,22 @@ export class QuizService {
                           label: s.plan.questions[s.index].label,
                           prompt: s.plan.questions[s.index].prompt,
                       },
-                      evidence: s.evidence[s.index],
+                      evidence: {
+                          ...s.evidence[s.index],
+                          attempts: s.evidence[s.index].attempts.map(
+                              ({
+                                  answer,
+                                  assessment,
+                                  assisted,
+                                  latencyMs,
+                              }) => ({
+                                  answer,
+                                  assessment,
+                                  assisted,
+                                  latencyMs,
+                              }),
+                          ),
+                      },
                       busy: s.busy,
                       replays: s.replays,
                       developerExposed: s.developerExposed,
@@ -78,7 +93,11 @@ export class QuizService {
                     "The prepared lesson is missing.",
                     409,
                 );
-            state.active = this.fresh(plan, 0, false);
+            const exposed = await tx.get<string[]>(
+                "_system/exposed-plans.json",
+                [],
+            );
+            state.active = this.fresh(plan, 0, exposed.includes(plan.planId));
             state.revision++;
             tx.put({ path: QUEUE_PATH, content: JSON.stringify(state) });
         });
@@ -131,6 +150,7 @@ export class QuizService {
             return s;
         });
         const started = Date.now();
+        let diagnostics: unknown;
         try {
             const assessment = await this.grade({
                 plan: session.plan,
@@ -140,6 +160,9 @@ export class QuizService {
                     (a) => a.assessment.feedback,
                 ),
                 signal: controller.signal,
+                onDiagnostics: (value) => {
+                    diagnostics = value;
+                },
             });
             controller.signal.throwIfAborted();
             await this.ws.mutate(async (tx) => {
@@ -150,6 +173,7 @@ export class QuizService {
                     answer,
                     assessment,
                     latencyMs: Date.now() - started,
+                    diagnostics,
                     assisted:
                         evidence.attempts.length > 0 ||
                         s.replays > 0 ||
@@ -282,6 +306,22 @@ export class QuizService {
         await this.ready;
         await this.ws.mutate(async (tx) => {
             const state = await tx.get(QUEUE_PATH, emptyQueue());
+            const exposed = await tx.get<string[]>(
+                "_system/exposed-plans.json",
+                [],
+            );
+            const all = [
+                ...new Set([
+                    ...exposed,
+                    ...state.ready,
+                    ...(state.active ? [state.active.plan.planId] : []),
+                ]),
+            ];
+            if (all.length !== exposed.length)
+                tx.put({
+                    path: "_system/exposed-plans.json",
+                    content: JSON.stringify(all),
+                });
             if (state.active && !state.active.developerExposed) {
                 state.active.developerExposed = true;
                 tx.put({ path: QUEUE_PATH, content: JSON.stringify(state) });

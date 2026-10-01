@@ -71,6 +71,16 @@ export async function publishLesson(
                     409,
                 );
         }
+        const currentDraft = await workspace.files.read(draftPath);
+        if (
+            !currentDraft ||
+            createHash("sha256").update(currentDraft).digest("hex") !==
+                doc.meta.hash
+        )
+            throw new WorkspaceError(
+                "Draft changed during publication; read it again.",
+                409,
+            );
         const plan: Lesson = {
             ...draft,
             planId,
@@ -92,6 +102,7 @@ export async function reviseQueue(
     workspace: Workspace,
     order: string[],
     reason: string,
+    expectedRevision: number,
 ) {
     return workspace.mutate(async (tx) => {
         const state = await tx.get<QueueState>(QUEUE_PATH, emptyQueue());
@@ -101,6 +112,11 @@ export async function reviseQueue(
         )
             throw new WorkspaceError(
                 "Use each retained queued plan ID once. Active/completed lessons cannot be changed.",
+            );
+        if (state.revision !== expectedRevision)
+            throw new WorkspaceError(
+                "Queue changed; inspect vocabulary_contract again.",
+                409,
             );
         const removed = state.ready.filter((id) => !order.includes(id));
         state.superseded.push(...removed);
@@ -112,6 +128,12 @@ export async function reviseQueue(
             content: `# Queue revision\n\n${reason}\n\nSuperseded: ${removed.join(", ") || "none"}\n\nNew order: ${order.join(", ")}\n`,
             policy: "immutable",
         });
-        return state;
+        return {
+            revision: state.revision,
+            ready: state.ready,
+            activePlanId: state.active?.plan.planId,
+            completed: state.completed,
+            superseded: state.superseded,
+        };
     }, "home");
 }

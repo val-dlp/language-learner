@@ -1,13 +1,29 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Code2, Layers3 } from "lucide-react";
 import { Button } from "./ui/button";
 import { Inspector } from "./developer/inspector";
 export function AppShell({ children }: { children: React.ReactNode }) {
     const path = usePathname();
     const [developer, setDeveloper] = useState(false);
+    const [document, setDocument] = useState<string | undefined>();
+    useEffect(() => {
+        const open = (event: Event) => {
+            setDocument((event as CustomEvent<string>).detail);
+            setDeveloper(true);
+            setTimeout(
+                () =>
+                    window.document
+                        .getElementById("workspace-inspector")
+                        ?.scrollIntoView({ behavior: "smooth" }),
+                50,
+            );
+        };
+        window.addEventListener("wordfield:document", open);
+        return () => window.removeEventListener("wordfield:document", open);
+    }, []);
     return (
         <div className="mx-auto max-w-[1440px] px-5 pb-12 sm:px-10">
             <header className="app-header">
@@ -48,7 +64,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
                 </Button>
             </header>
             {children}
-            {developer && <Inspector />}
+            {developer && <Inspector initialPath={document} />}
         </div>
     );
 }

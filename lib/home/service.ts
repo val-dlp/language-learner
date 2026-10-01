@@ -1,3 +1,4 @@
+import { plugins } from "@/lib/plugins/registry";
 import { documentTools, type ToolRecord } from "./tools";
 import { runAgent, type AgentEngine } from "@/lib/models/agent";
 import { modelConfig, modelError } from "@/lib/models/config";
@@ -133,15 +134,14 @@ export class HomeService {
                     (path) => this.workspace.read(path, "home"),
                 ),
             );
-            const history = (await this.messages())
-                .slice(-16)
-                .map((m) => ({
-                    role: m.role,
-                    text: m.text.slice(0, 6000),
-                    truncated: m.text.length > 6000,
-                }));
+            const history = (await this.messages()).slice(-16).map((m) => ({
+                role: m.role,
+                text: m.text.slice(0, 6000),
+                truncated: m.text.length > 6000,
+            }));
             const input = {
                 trigger: run.trigger,
+                plugins,
                 message,
                 sources: sources.map((d) => ({
                     meta: d.meta,

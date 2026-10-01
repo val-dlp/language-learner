@@ -4,7 +4,7 @@ import { LessonQueue } from "@/components/lesson-queue";
 import { HomeChat } from "@/components/home-chat";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
-import { Markdown } from "@/components/markdown";
+import { Markdown, openDocument } from "@/components/markdown";
 import { plugins } from "@/lib/plugins/registry";
 export default function Home() {
     const [profile, setProfile] = useState("");
@@ -65,6 +65,14 @@ export default function Home() {
                         </summary>
                         <div className="mt-4">
                             <Markdown text={curriculum || "Loading…"} />
+                            <button
+                                className="mt-2 text-sm text-teal-700 underline"
+                                onClick={() =>
+                                    openDocument("home/curriculum.md")
+                                }
+                            >
+                                Edit curriculum
+                            </button>
                         </div>
                     </details>
                     <details className="panel p-6">
@@ -73,6 +81,12 @@ export default function Home() {
                         </summary>
                         <div className="mt-4">
                             <Markdown text={profile} />
+                            <button
+                                className="mt-2 text-sm text-teal-700 underline"
+                                onClick={() => openDocument("home/profile.md")}
+                            >
+                                Edit profile
+                            </button>
                         </div>
                     </details>
                 </aside>

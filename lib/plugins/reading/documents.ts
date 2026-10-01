@@ -130,7 +130,8 @@ export async function extractText(
             const lines: { text: string; y: number; height: number }[] = [];
             let line = "",
                 previousY: number | null = null,
-                lineHeight = 12, previousEnd = 0;
+                lineHeight = 12,
+                previousEnd = 0;
             for (const item of content.items) {
                 if (!("str" in item)) continue;
                 const y = item.transform[5];
@@ -148,7 +149,13 @@ export async function extractText(
                 }
                 // PDF.js often splits a single word into several drawing operations.
                 // Infer a space only from a real horizontal gap, never from item boundaries.
-                if (line && !/\s$/.test(line) && !/^\s/.test(item.str) && item.transform[4] - previousEnd > lineHeight * 0.15) line += " ";
+                if (
+                    line &&
+                    !/\s$/.test(line) &&
+                    !/^\s/.test(item.str) &&
+                    item.transform[4] - previousEnd > lineHeight * 0.15
+                )
+                    line += " ";
                 line += item.str;
                 previousEnd = item.transform[4] + item.width;
                 previousY = y;

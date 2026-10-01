@@ -47,6 +47,7 @@ export type Attempt = {
     assessment: Grade;
     assisted: boolean;
     latencyMs: number;
+    diagnostics?: unknown;
 };
 export type QuestionEvidence = {
     questionId: string;

@@ -31,6 +31,7 @@ export function requestRefill(
 export class RefillWorker {
     private working = false;
     private recovered = false;
+    private stopped = false;
     constructor(
         private ws: Workspace,
         private home: HomeService,
@@ -53,6 +54,7 @@ export class RefillWorker {
         });
     }
     async cancel() {
+        this.stopped = true;
         await this.ws.mutate(async (tx) => {
             const job = await tx.get<RefillJob | null>(JOB_PATH, null);
             if (job && ["running", "pending"].includes(job.status))
@@ -70,6 +72,7 @@ export class RefillWorker {
     async kick() {
         if (this.working || this.home.busy) return;
         this.working = true;
+        this.stopped = false;
         try {
             const job = await this.ws.mutate(async (tx) => {
                 let job = await tx.get<RefillJob | null>(JOB_PATH, null);
@@ -89,7 +92,7 @@ export class RefillWorker {
                 tx.put({ path: JOB_PATH, content: JSON.stringify(job) });
                 return job.status === "running" ? job : null;
             });
-            if (!job) return;
+            if (!job || this.stopped) return;
             if (this.home.busy) {
                 await this.ws.write({
                     path: JOB_PATH,

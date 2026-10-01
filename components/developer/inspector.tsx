@@ -1,9 +1,10 @@
 "use client";
 import { useEffect, useState } from "react";
+import { RunInspector } from "./run-inspector";
 import { LessonQueue } from "@/components/lesson-queue";
 import { Button } from "@/components/ui/button";
 import type { DocMeta, Document } from "@/lib/workspace/store";
-export function Inspector() {
+export function Inspector({ initialPath }: { initialPath?: string }) {
     const [documents, setDocuments] = useState<DocMeta[]>([]);
     const [selected, setSelected] = useState("");
     const [doc, setDoc] = useState<Document | null>(null);
@@ -19,7 +20,8 @@ export function Inspector() {
     }
     useEffect(() => {
         refresh().catch((e) => setError(e.message));
-    }, []);
+        if (initialPath) read(initialPath);
+    }, [initialPath]);
     async function read(path: string, revision?: number) {
         setLoading(true);
         setSelected(path);
@@ -63,7 +65,8 @@ export function Inspector() {
         doc &&
         ["home/profile.md", "home/curriculum.md"].includes(doc.meta.path);
     return (
-        <section className="developer-panel">
+        <section id="workspace-inspector" className="developer-panel">
+            <RunInspector />
             <details className="mb-5">
                 <summary className="cursor-pointer text-sm font-medium">
                     Queue settings
