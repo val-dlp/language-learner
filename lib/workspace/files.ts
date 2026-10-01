@@ -114,7 +114,10 @@ export class SafeFiles {
                 if (
                     !stat.isFile() ||
                     stat.nlink !== 1 ||
-                    stat.size > 30 * 1024 * 1024
+                    stat.size >
+                        (relative === "_system/pending.json" ? 128 : 30) *
+                            1024 *
+                            1024
                 )
                     throw new WorkspaceError("Invalid document file.");
                 const data = await file.readFile();
