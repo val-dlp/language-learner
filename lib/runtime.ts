@@ -14,3 +14,12 @@ export async function getWorkspace() {
     await globalState.wordfieldWorkspace.ready;
     return globalState.wordfieldWorkspace.workspace;
 }
+
+import { HomeService } from "./home/service";
+const services = globalThis as typeof globalThis & {
+    wordfieldHome?: HomeService;
+};
+export async function getHome() {
+    const workspace = await getWorkspace();
+    return (services.wordfieldHome ??= new HomeService(workspace));
+}

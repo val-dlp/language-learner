@@ -1,5 +1,6 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
+import { HomeChat } from "@/components/home-chat";
 import Link from "next/link";
 import { ArrowUpRight, MessageCircle } from "lucide-react";
 import { Markdown } from "@/components/markdown";
@@ -8,7 +9,7 @@ export default function Home() {
     const [profile, setProfile] = useState("");
     const [curriculum, setCurriculum] = useState("");
     const [error, setError] = useState("");
-    useEffect(() => {
+    const refresh = useCallback(() => {
         Promise.all(
             ["home/profile.md", "home/curriculum.md"].map(async (path) => {
                 const r = await fetch(
@@ -25,6 +26,7 @@ export default function Home() {
             })
             .catch((e) => setError(e.message));
     }, []);
+    useEffect(refresh, [refresh]);
     return (
         <main className="py-10">
             <p className="eyebrow">Your learning, with direction</p>
@@ -35,22 +37,7 @@ export default function Home() {
             </h1>
             {error && <p className="notice mt-5">{error}</p>}
             <div className="mt-8 grid gap-7 lg:grid-cols-[minmax(0,1.4fr)_minmax(300px,1fr)]">
-                <section className="panel p-7">
-                    <MessageCircle className="mb-5 size-6 text-teal-700" />
-                    <h2 className="serif text-2xl">
-                        Meet your learning guide.
-                    </h2>
-                    <p className="mt-4 leading-7 text-stone-600">
-                        Home keeps your goals, plans your practice, and learns
-                        from the evidence you bring back. Your profile and
-                        curriculum live in editable documents.
-                    </p>
-                    <p className="mt-6 text-sm text-stone-500">
-                        The planning conversation is the next step in this
-                        refactor. Your existing vocabulary tutor is still
-                        available.
-                    </p>
-                </section>
+                <HomeChat onChanged={refresh} />
                 <aside className="space-y-5">
                     <section className="panel p-6">
                         <h2 className="serif mb-4 text-2xl">Practice spaces</h2>
