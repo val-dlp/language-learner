@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import { LessonQueue } from "@/components/lesson-queue";
 import { Button } from "@/components/ui/button";
 import type { DocMeta, Document } from "@/lib/workspace/store";
 export function Inspector() {
@@ -63,6 +64,12 @@ export function Inspector() {
         ["home/profile.md", "home/curriculum.md"].includes(doc.meta.path);
     return (
         <section className="developer-panel">
+            <details className="mb-5">
+                <summary className="cursor-pointer text-sm font-medium">
+                    Queue settings
+                </summary>
+                <LessonQueue settings />
+            </details>
             <div className="flex items-center justify-between gap-3">
                 <div>
                     <h2 className="font-semibold">Workspace inspector</h2>

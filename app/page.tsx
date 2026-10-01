@@ -1,8 +1,9 @@
 "use client";
 import { useCallback, useEffect, useState } from "react";
+import { LessonQueue } from "@/components/lesson-queue";
 import { HomeChat } from "@/components/home-chat";
 import Link from "next/link";
-import { ArrowUpRight, MessageCircle } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { Markdown } from "@/components/markdown";
 import { plugins } from "@/lib/plugins/registry";
 export default function Home() {
@@ -56,6 +57,7 @@ export default function Home() {
                                 </p>
                             </Link>
                         ))}
+                        <LessonQueue />
                     </section>
                     <details className="panel p-6" open>
                         <summary className="serif cursor-pointer text-xl">

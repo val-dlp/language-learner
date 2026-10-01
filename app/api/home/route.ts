@@ -1,18 +1,20 @@
 import { after, NextResponse } from "next/server";
 import { z } from "zod";
-import { getHome, getWorkspace } from "@/lib/runtime";
+import { getHome, getWorkspace, getRefill } from "@/lib/runtime";
 import { body, failure } from "@/lib/http";
 import { WorkspaceError } from "@/lib/workspace/files";
 import {
     QUEUE_PATH,
     emptyQueue,
     DEFAULT_QUEUE_CONFIG,
+    QueueConfigSchema,
 } from "@/lib/plugins/vocabulary/schema";
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 export async function GET(request: Request) {
     try {
         const home = await getHome();
+        after(async () => (await getRefill()).kick());
         if (new URL(request.url).searchParams.has("events")) {
             let unsubscribe = () => {};
             const encoder = new TextEncoder();
@@ -67,6 +69,7 @@ export async function GET(request: Request) {
                 tx.get("_system/queue-config.json", DEFAULT_QUEUE_CONFIG),
             ),
             configured: Boolean(process.env.OPENAI_API_KEY),
+            refill: await (await getRefill()).status(),
         });
     } catch (error) {
         return failure(error);
@@ -81,10 +84,36 @@ export async function POST(request: Request) {
                     message: z.string().trim().min(1).max(12000),
                 }),
                 z.object({ action: z.literal("cancel") }),
+                z.object({ action: z.literal("retry_refill") }),
+                z.object({ action: z.literal("cancel_refill") }),
+                z.object({
+                    action: z.literal("configure_queue"),
+                    config: QueueConfigSchema,
+                }),
             ])
             .parse(await body(request));
         const home = await getHome();
+        if (input.action === "configure_queue") {
+            await (
+                await getWorkspace()
+            ).write({
+                path: "_system/queue-config.json",
+                content: JSON.stringify(input.config),
+            });
+            return NextResponse.json({ ok: true });
+        }
+        if (input.action === "retry_refill") {
+            await (await getRefill()).retry();
+            after(async () => (await getRefill()).kick());
+            return NextResponse.json({ ok: true });
+        }
+        if (input.action === "cancel_refill") {
+            await (await getRefill()).cancel();
+            return NextResponse.json({ ok: true });
+        }
         if (input.action === "cancel") {
+            if (home.current?.trigger === "queue_refill")
+                await (await getRefill()).cancel();
             home.cancel();
             return NextResponse.json({ ok: true });
         }
@@ -94,7 +123,10 @@ export async function POST(request: Request) {
                 503,
             );
         const run = home.launch(input.message);
-        after(() => run.work.then(() => {}));
+        after(async () => {
+            await run.work;
+            await (await getRefill()).kick();
+        });
         return NextResponse.json({ runId: run.id });
     } catch (error) {
         return failure(error);
