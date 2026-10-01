@@ -41,3 +41,12 @@ export async function getRefill() {
         home,
     ));
 }
+
+import { ReaderService } from "./plugins/reading/assistant";
+const reader = globalThis as typeof globalThis & {
+    wordfieldReader?: ReaderService;
+};
+export async function getReader() {
+    const workspace = await getWorkspace();
+    return (reader.wordfieldReader ??= new ReaderService(workspace));
+}
