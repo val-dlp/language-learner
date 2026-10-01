@@ -380,3 +380,11 @@ Migration reads the existing `.local/checkpoint.json`, creates a profile contain
 No heartbeat or periodic background curriculum updates beyond the explicit queue-refill event; no database or formal mastery scores; no retrieval embeddings; no multi-learner accounts; no plugin marketplace; no OCR or faithful PDF page rendering; no automatic long-term-memory compaction; no runtime code generation by Home. Richer tools and document types can be added after observing how the agent uses the initial workspace.
 
 The core experiment is whether an agent with clear goals, accessible evidence, and freedom to maintain its own working documents produces better-directed practice over time. This design makes that behavior observable without prescribing every observation the agent must make.
+
+## Implementation record — October 1, 2026
+
+Both delivery tracks are implemented. Core storage/Home, prepared practice plus refill, PDF imports, and the reader assistant were committed in separate stages. The quiz and refill worker shared one implementation commit because session closure and its durable event form a single transaction.
+
+Final storage uses an ordered change array in `_system/manifest.json`, a single Home cursor in `_system/home-state.json`, and a coalesced durable refill record in `_system/refill.json`. These replace the proposed per-change/per-job directories without changing the event or acknowledgment semantics. Revisions and write-ahead recovery are implemented.
+
+The two Biblioteca Nacional candidates were editions of one anthology with difficult text ordering. The installed samples instead use two distinct short-story PDFs from textos.info, with source/edition metadata and no PDF assets committed to Git. Original page boundaries and stable text anchors are retained. See the README and validation notes for exact operating behavior and checks.
